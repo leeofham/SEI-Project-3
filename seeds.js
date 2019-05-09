@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 const User = require('./models/User')
 const Product = require('./models/product')
 const Box = require('./models/box')
-const port = 'mongodb://localhost:27017/nerd-crate-api'
+const { dbUri } = require('./config/environments')
 
-mongoose.connect(port, (err, db) => {
+mongoose.connect(dbUri, (err, db) => {
   db.dropDatabase()
     .then(() => {
     // add some new data

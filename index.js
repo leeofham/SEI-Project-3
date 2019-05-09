@@ -1,11 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const routes = require('./config/routes')
+const { port, dbUri } = require('./config/environments')
 
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017/nerd-crate-api')
+mongoose.connect(dbUri)
 
 app.use('/api', routes)
 
-app.listen(4000, () => console.log('Nerd Crate is on port 4000'))
+app.listen(port, () => console.log(`Nerd Crate is on port ${port}}`))
