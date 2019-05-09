@@ -23,7 +23,7 @@ function createRoute(req, res, next) {
 }
 
 function updateRoute(req, res, next) {
-  req.body.modifiedBy = req.currentUser
+  // req.body.modifiedBy = req.currentUser
 
   Box.findById(req.params.id)
     .then(box => box.set(req.body))
