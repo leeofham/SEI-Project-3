@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const productController = require('../controllers/products')
 const authController = require('../controllers/auth')
-const boxesController = require('..controllers/box ')
+const boxesController = require('..controllers/box')
 
 router.get('/', (req, res) => res.json({ message: 'Welcome to Nerd Crate API' }))
 
