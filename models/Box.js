@@ -5,6 +5,9 @@ const boxSchema = new mongoose.Schema({
     type: String,
     required: 'What box size do you want?'
   },
+  numberOfLegendary: {
+    type: Number
+  },
   numberOfRare: {
     type: Number
   },
