@@ -38,4 +38,18 @@ const userSchema = new mongoose.Schema({
   }
 })
 
+userSchema.virtual('passwordConfirmation')
+  .set(function setPasswordConfirmation(plaintext) {
+    this._passwordConfirmation = plaintext
+  })
+
+userSchema.pre('validate', function checkPasswords(next) {
+  if(this.isModified('password') && this._passwordConfirmation !== this.password) {
+    this.invalidate('passwordConfirmation', 'Passwords do not match')
+  }
+  next()
+})
+
+
+
 module.exports = mongoose.model('User', userSchema)
