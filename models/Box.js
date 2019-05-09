@@ -1,13 +1,18 @@
 const mongoose = require('mongoose')
 
 const boxSchema = new mongoose.Schema({
-  box: {
+  boxType: {
     type: String,
-    required: 'What box size do you want?',
-    numberOfRare: Number,
-    numberOfCommon: Number,
-    total: Number,
-    contents: Array
+    required: 'What box size do you want?'
+  },
+  numberOfRare: {
+    type: Number
+  },
+  numberOfCommon: {
+    type: Number
+  },
+  contents: {
+    type: Array
   }
 })
 
