@@ -6,6 +6,7 @@
   "author": "Liam Roberts <liamroberts300@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "babel-loader": "^8.0.5",
     "express": "^4.16.4",
     "mongoose": "^5.5.6"
   }
