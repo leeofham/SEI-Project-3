@@ -43,7 +43,7 @@ mongoose.connect(port, (err, db) => {
       },{
         brandName: 'Star Wars',
         category: 'Film',
-        productType: 'Tou',
+        productType: 'Toy',
         image: 'https://target.scene7.com/is/image/Target/GUEST_363239ec-4fba-4aba-9bb1-c871a38a6906?wid=488&hei=488&fmt=pjpeg',
         rarity: 'Common',
         createdBy: user
@@ -83,28 +83,41 @@ mongoose.connect(port, (err, db) => {
         rarity: 'Common',
         createdBy: user
       }])
-        .then(() => {
+        .then(product => {
+
+          // const indexArray = []
+          //
+          // function randIndex(){
+          //   const randomIndex = Math.floor(Math.random() * product.length)
+          //   if(indexArray.includes(randomIndex)){
+          //     randIndex()
+          //   } else {
+          //     indexArray.push(randomIndex)
+          //     return randomIndex
+          //   }
+          // }
+
           return Box.create([{
             boxType: 'Premade',
             numberOfLegendary: 0,
             numberOfRare: 1,
             numberOfCommon: 2,
             total: 3,
-            contents: []
+            contents: [product[0], product[1], product[2]]
           }, {
             boxType: 'Premade',
             numberOfLegendary: 1,
             numberOfRare: 2,
             numberOfCommon: 3,
             total: 6,
-            contents: []
+            contents: [product[0], product[1], product[2], product[3], product[4], product[5]]
           },{
             boxType: 'Premade',
             numberOfLegendary: 2,
             numberOfRare: 3,
             numberOfCommon: 4,
             total: 9,
-            contents: []
+            contents: [product[0], product[1], product[2], product[3], product[4], product[5], product[6], product[7], product[8]]
           }])
         })
     })
