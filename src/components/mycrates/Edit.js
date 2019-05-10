@@ -16,6 +16,7 @@ class Edit extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
   }
 
   componentDidMount() {
@@ -41,6 +42,14 @@ class Edit extends React.Component {
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
+  handleDelete() {
+    const token = Auth.getToken()
+    axios.delete(`/api/boxes/${this.state.data._id}`, this.state.data,  {
+      headers: { 'Authorization': `Bearer ${token}` }
+    })
+      .then(() => this.props.history.push('/mycrates'))
+  }
+
   render() {
     return (
       <section className="section">
@@ -54,6 +63,7 @@ class Edit extends React.Component {
                 errors={this.state.errors}
                 houses={this.state.houses}
               />
+              <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
             </div>
           </div>
         </div>
