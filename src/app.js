@@ -10,6 +10,8 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 
 import PremadeIndex from './components/premade/Index'
+import BoxesChoice from './components/common/Boxes'
+
 
 import 'bulma'
 import './style.scss'
@@ -22,6 +24,7 @@ class App extends React.Component{
           <Navbar />
           <Switch>
             <Route path="/premade" component={PremadeIndex} />
+            <Route path="/boxes" component={BoxesChoice} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/" component={Home} />
