@@ -9,6 +9,7 @@ function indexRoute(req, res, next){
 
 function showRoute(req, res, next){
   Box.findById(req.params.id)
+    .populate('contents')
     .then(box => res.json(box))
     .catch(next)
 }
