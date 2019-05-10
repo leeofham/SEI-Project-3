@@ -11,10 +11,11 @@ router.get('/product/:id', productController.show) // might not need this route
 router.get('/premade', boxesController.index)
 router.get('/premade/:id', boxesController.show)
 
-router.get('/mystery/new', productController.pushProducts, boxesController.create)
-router.get('/mystery/mycrate', boxesController.index)
-router.put('/mystery/mycrate/:id', boxesController.update)
-router.delete('/mystery/mycrate/:id', boxesController.delete)
+router.post('/boxes', boxesController.create)
+router.get('/boxes', boxesController.index)
+router.get('/boxes/:id', boxesController.show)
+router.put('/boxes/:id', boxesController.update)
+router.delete('/boxes/:id', boxesController.delete)
 
 router.post('/register', authController.register)
 router.post('/login', authController.login)
