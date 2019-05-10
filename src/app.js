@@ -9,6 +9,8 @@ import Navbar from './components/common/Navbar'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 
+import BoxesChoice from './components/common/Boxes'
+
 import 'bulma'
 import './style.scss'
 
@@ -19,6 +21,8 @@ class App extends React.Component{
         <div>
           <Navbar />
           <Switch>
+            <Route path="/boxes" component={BoxesChoice} />
+
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/" component={Home} />
