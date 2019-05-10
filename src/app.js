@@ -17,6 +17,7 @@ import MyCratesIndex from './components/mycrates/Index'
 import MyCratesNew from './components/mycrates/New'
 import MyCratesEdit from './components/mycrates/Edit'
 
+import BoxesOrdered from './components/common/orderedBox'
 
 
 import 'bulma'
@@ -32,6 +33,7 @@ class App extends React.Component{
             <Route path="/mycrates/new" component={MyCratesNew} />
             <Route path="/mycrates/:id" component={MyCratesEdit} />
             <Route path="/mycrates" component={MyCratesIndex} />
+            <Route path="/common/orderedBox" component={BoxesOrdered} />
             <Route path="/premade/:id" component={PremadeShow} />
             <Route path="/premade" component={PremadeIndex} />
             <Route path="/boxes" component={BoxesChoice} />
