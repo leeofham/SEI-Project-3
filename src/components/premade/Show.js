@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Show extends React.Component {
@@ -21,41 +20,40 @@ class Show extends React.Component {
 
   render() {
     if(!this.state.premade) return null
-    const { name, _id, image } = this.state.premade
+    const { image, name } = this.state.premade
 
     return (
-      <section className="section">
-        <div className="container">
-          <div className="level">
-            <div className="level-left">
-              <h1 className="title is-1">{name}</h1>
-            </div>
-              <div className="level-right">
+      <body>
+        <section className="section">
+          <div className="container">
+            <h1 className="title is-1">{name}</h1>
+
+
+
+            <hr />
+
+            <div className="columns is-multiline">
+              <div className="column is-half-desktop is-full-tablet">
+                <figure className="image is-128x128">
+                  <img src={image} alt={name} />
+                </figure>
               </div>
-            }
-          <hr />
 
-          <div className="columns is-multiline">
-            <div className="column is-half-desktop is-full-tablet">
-              <figure className="image">
-                <img src={image} alt={name} />
-              </figure>
-            </div>
-
-            <div className="column is-half-desktop is-full-tablet">
-              <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-              </article>
-              <button>Small</button>
-              <button>Medium</button>
-              <button>Large</button>
-              <hr />
+              <div className="column is-half-desktop is-full-tablet">
+                <article>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </article>
+                <button>Small</button>
+                <button>Medium</button>
+                <button>Large</button>
+                <hr />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </body>
     )
   }
 }
