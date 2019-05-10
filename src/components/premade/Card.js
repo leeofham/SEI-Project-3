@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Card = ({ brandName, image, category }) => {
+const Card = ({ image, category, total }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <h3 className="card-header-title">{brandName}</h3>
+        <h3 className="card-header-title">Premade Star Wars Box</h3>
       </div>
       <div className="card-image">
         <figure className="image">
-          <img src={image} alt={brandName} />
+          <img src={image} alt={'Premade Star Wars Box'} />
         </figure>
       </div>
       <div className="card-header">
@@ -16,7 +16,7 @@ const Card = ({ brandName, image, category }) => {
       </div>
       <div className="card-content">
         <div className="content">
-          <p>Brand {brandName.name}</p>
+          <p>Premade Star Wars box with {total} items</p>
         </div>
       </div>
     </div>

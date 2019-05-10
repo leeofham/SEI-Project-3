@@ -7,7 +7,7 @@ const productSchema = new mongoose.Schema({
     required: 'Please enter the name of the brand eg Star Wars'
   },
   category: {
-    type: mongoose.Schema.ObjectId,
+    type: String,
     ref: 'category',
     required: 'Please enter Film, Game, Music or TV Show'
   },
