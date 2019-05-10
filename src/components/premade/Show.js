@@ -1,8 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-// import { Link } from 'react-router-dom'
-=======
->>>>>>> development
 import axios from 'axios'
 
 class Show extends React.Component {
@@ -24,7 +20,7 @@ class Show extends React.Component {
 
   render() {
     if(!this.state.premade) return null
-    const { _id, image, name } = this.state.premade
+    const { image, name } = this.state.premade
 
     return (
       <body>

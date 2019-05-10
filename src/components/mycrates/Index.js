@@ -16,7 +16,7 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    axios('/api/mycrates')
+    axios('/api/boxes')
       .then(res => this.setState({ mycrates: res.data }))
   }
 

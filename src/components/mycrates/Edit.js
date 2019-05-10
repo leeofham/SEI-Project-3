@@ -22,7 +22,7 @@ class Edit extends React.Component {
     // promise props allows us to make multiple promises at the same time
     // but handle them all with 'then' block
     // this means we dont have to keep setting state for each request
-    axios.get(`/api/mycrates/${this.props.match.params.id}`)
+    axios.get(`/api/boxes/${this.props.match.params.id}`)
       .then(res => res.data)
       .catch(err => this.setState({ errors: err.response.data.errors}))
   }

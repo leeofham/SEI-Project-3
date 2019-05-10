@@ -53,7 +53,7 @@ class Navbar extends React.Component {
 
             <div className="navbar-start">
               {/* Left-hand links */}
-              <Link to="/mycrate" className="navbar-item">My Crate</Link>
+              <Link to="/mycrates" className="navbar-item">My Crate</Link>
               <Link to="/premade" className="navbar-item">Premade</Link>
             </div>
 
