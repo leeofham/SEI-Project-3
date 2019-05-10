@@ -25,7 +25,6 @@ class New extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
     const token = Auth.getToken()
 
     axios.post('/api/boxes', this.state.data, {

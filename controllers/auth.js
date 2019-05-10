@@ -10,7 +10,7 @@ function registerRoute(req, res, next) {
 }
 
 function loginRoute(req, res, next) {
-  User. findOne({ email: req.body.email })
+  User.findOne({ email: req.body.email })
     .then(user => {
       if(!user ||
     !user.isPasswordValid(req.body.password)) {

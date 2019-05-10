@@ -21,6 +21,11 @@ const boxSchema = new mongoose.Schema({
   numberOfCommon: {
     type: Number
   },
+  createdBy: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User',
+    required: true
+  },
   contents: [{ type: mongoose.Schema.ObjectId, ref: 'Product' }]
 })
 
