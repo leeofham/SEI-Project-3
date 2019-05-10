@@ -85,18 +85,6 @@ mongoose.connect(dbUri, (err, db) => {
       }])
         .then(product => {
 
-          // const indexArray = []
-          //
-          // function randIndex(){
-          //   const randomIndex = Math.floor(Math.random() * product.length)
-          //   if(indexArray.includes(randomIndex)){
-          //     randIndex()
-          //   } else {
-          //     indexArray.push(randomIndex)
-          //     return randomIndex
-          //   }
-          // }
-
           return Box.create([{
             boxType: 'Premade',
             numberOfLegendary: 0,

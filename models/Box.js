@@ -3,7 +3,11 @@ const mongoose = require('mongoose')
 const boxSchema = new mongoose.Schema({
   boxType: {
     type: String,
-    required: 'What box size do you want?'
+    required: 'What box do you want?'
+  },
+  total: {
+    type: Number,
+    required: 'Total number of items in box'
   },
   numberOfLegendary: {
     type: Number

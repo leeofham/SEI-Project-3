@@ -11,7 +11,7 @@ router.get('/product/:id', productController.show) // might not need this route
 router.get('/premade', boxesController.index)
 router.get('/premade/:id', boxesController.show)
 
-router.post('/mystery/new', boxesController.create)
+router.get('/mystery/new', productController.pushProducts, boxesController.create)
 router.get('/mystery/mycrate', boxesController.index)
 router.put('/mystery/mycrate/:id', boxesController.update)
 router.delete('/mystery/mycrate/:id', boxesController.delete)

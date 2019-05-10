@@ -14,11 +14,13 @@ function showRoute(req, res, next){
 }
 
 function createRoute(req, res, next) {
-
+  // take the total number of products the box
+  // add products._id * the total contents to the box
   req.body.createdBy = req.currentUser
-
   Box.create(req.body)
-    .then(box => res.status(201).json(box)) // send it as JSON
+    .then(box => {
+      res.status(201).json(box) // send it as JSON
+    })
     .catch(next) // handle our errors
 }
 
