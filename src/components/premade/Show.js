@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Show extends React.Component {
@@ -30,9 +30,9 @@ class Show extends React.Component {
             <div className="level-left">
               <h1 className="title is-1">{name}</h1>
             </div>
-              <div className="level-right">
-              </div>
-            }
+            <div className="level-right">
+            </div>
+          </div>
           <hr />
 
           <div className="columns is-multiline">
