@@ -11,17 +11,11 @@ class New extends React.Component {
 
     this.state = {
       data: {},
-      errors: {},
-      category: []
+      errors: {}
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  componentDidMount() {
-    axios.get('/api/mycrate')
-      .then(res => this.setState({ category: res.data }))
   }
 
   handleChange(e) {
@@ -34,10 +28,10 @@ class New extends React.Component {
 
     const token = Auth.getToken()
 
-    axios.post('/api/mycrate/:id', this.state.data, {
+    axios.post('/api/boxes', this.state.data, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
-      .then(() => this.props.history.push('/mycrate/:id'))
+      .then(() => this.props.history.push('/mycrates'))
   }
 
   render() {
@@ -51,7 +45,6 @@ class New extends React.Component {
                 handleSubmit={this.handleSubmit}
                 data={this.state.data}
                 errors={this.state.errors}
-                category={this.state.category}
               />
             </div>
           </div>

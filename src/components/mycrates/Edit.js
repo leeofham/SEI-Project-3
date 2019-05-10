@@ -19,11 +19,8 @@ class Edit extends React.Component {
   }
 
   componentDidMount() {
-    // promise props allows us to make multiple promises at the same time
-    // but handle them all with 'then' block
-    // this means we dont have to keep setting state for each request
     axios.get(`/api/boxes/${this.props.match.params.id}`)
-      .then(res => res.data)
+      .then(res => this.setState({ data: res.data}))
       .catch(err => this.setState({ errors: err.response.data.errors}))
   }
 
@@ -37,7 +34,7 @@ class Edit extends React.Component {
 
     const token = Auth.getToken()
 
-    axios.put(`/api/mycrates/${this.state.data._id}`, this.state.data, {
+    axios.put(`/api/boxes/${this.state.data._id}`, this.state.data, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
       .then(() => this.props.history.push('/mycrates'))
