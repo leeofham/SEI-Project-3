@@ -86,21 +86,24 @@ mongoose.connect(dbUri, (err, db) => {
         .then(product => {
 
           return Box.create([{
-            boxType: 'Premade',
+            name: 'Premade',
+            image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
             numberOfLegendary: 0,
             numberOfRare: 1,
             numberOfCommon: 2,
             total: 3,
             contents: [product[0], product[1], product[2]]
           }, {
-            boxType: 'Premade',
+            name: 'Premade',
+            image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
             numberOfLegendary: 1,
             numberOfRare: 2,
             numberOfCommon: 3,
             total: 6,
             contents: [product[0], product[1], product[2], product[3], product[4], product[5]]
           },{
-            boxType: 'Premade',
+            name: 'Premade',
+            image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
             numberOfLegendary: 2,
             numberOfRare: 3,
             numberOfCommon: 4,

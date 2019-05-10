@@ -48,7 +48,7 @@ class Register extends React.Component {
                       onChange={this.handleChange}
                     />
                   </div>
-                  {this.state.errors.username && <div className="help is-danger">{this.state.errors.username}</div>}
+                  {this.state.errors.userName && <div className="help is-danger">{this.state.errors.userName}</div>}
                 </div>
                 <div className="field">
                   <label className="label">First Name</label>

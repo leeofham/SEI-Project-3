@@ -11,13 +11,16 @@ class Index extends React.Component {
     super()
 
     this.state = {
-      premades: []
+      boxes: [],
+      premade: []
     }
   }
 
   componentDidMount() {
     axios('/api/premade')
-      .then(res => this.setState({ premades: res.data }))
+      .then(res => this.setState({ boxes: res.data }))
+      .then(() => this.setState({premade: this.state.boxes.filter(item => item.name === 'Premade')}))
+
   }
 
   render() {
@@ -27,14 +30,13 @@ class Index extends React.Component {
           {Auth.isAuthenticated() && <Link to="/premade" className="button">Premade Box</Link>}
           <hr />
           <div className="columns is-multiline">
-            {this.state.premades.map(premade =>
+            {this.state.premade.map(premade =>
               <div key={premade._id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/premades/${premade._id}`}>
                   <Card {...premade} />
                 </Link>
               </div>
             )}
-
           </div>
         </div>
       </section>

@@ -5,6 +5,9 @@ const boxSchema = new mongoose.Schema({
     type: String,
     required: 'What box do you want call your box?'
   },
+  image: {
+    type: String
+  },
   total: {
     type: Number,
     required: 'Total number of items in box'
