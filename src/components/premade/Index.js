@@ -32,7 +32,7 @@ class Index extends React.Component {
           <div className="columns is-multiline">
             {this.state.premade.map(premade =>
               <div key={premade._id} className="column is-one-quarter-desktop is-one-third-tablet">
-                <Link to={`/premades/${premade._id}`}>
+                <Link to={`/premade/${premade._id}`}>
                   <Card {...premade} />
                 </Link>
               </div>

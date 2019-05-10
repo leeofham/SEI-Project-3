@@ -20,7 +20,7 @@ class Show extends React.Component {
 
   render() {
     if(!this.state.premade) return null
-    const { _id, image, name } = this.state.premade
+    const { image, name } = this.state.premade
 
     return (
       <body>

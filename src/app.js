@@ -13,6 +13,7 @@ import Register from './components/auth/Register'
 import PremadeShow from './components/premade/Show'
 import PremadeIndex from './components/premade/Index'
 import BoxesChoice from './components/common/Boxes'
+import BoxesOrdered from './components/common/orderedBox'
 
 
 import 'bulma'
@@ -25,6 +26,7 @@ class App extends React.Component{
         <div>
           <Navbar />
           <Switch>
+            <Route path="/common/orderedBox" component={BoxesOrdered} />
             <Route path="/premade/:id" component={PremadeShow} />
             <Route path="/premade" component={PremadeIndex} />
             <Route path="/boxes" component={BoxesChoice} />
