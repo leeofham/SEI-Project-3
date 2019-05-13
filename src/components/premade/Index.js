@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 // import Auth from '../../lib/Auth'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
 
 import Card from './Card'
 
@@ -28,15 +30,24 @@ class Index extends React.Component {
       <section className="section index">
         <h2 className="title is-fullwidth-desktop">Choose a premade crate...</h2>
         <div className="container">
-          <div className="columns is-multiline is-centered">
+          <Carousel
+            showThumbs={false}
+            showStatus={false}
+            showArrows={true}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={3000}
+            stopOnHover={true}
+          >
             {this.state.premade.map(premade =>
-              <div key={premade._id} className="column is-one-quarter-desktop is-one-third-tablet">
+              <div id="carousel" key={premade._id}>
                 <Link to={`/premade/${premade._id}`}>
                   <Card {...premade} />
                 </Link>
               </div>
             )}
-          </div>
+          </Carousel>
+
         </div>
       </section>
     )

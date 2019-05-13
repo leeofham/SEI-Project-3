@@ -7,7 +7,7 @@ const Card = ({ image, category, total }) => {
         <h3 className="card-header-title">Premade {category} Box</h3>
       </div>
       <div className="card-image">
-        <figure className="image">
+        <figure className="image is-128x128">
           <img src={image} alt={'Premade Star Wars Box'} />
         </figure>
       </div>

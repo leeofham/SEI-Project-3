@@ -23,26 +23,26 @@ class Show extends React.Component {
   render() {
 
     if(!this.state.premade) return null
-    const { image, name, description } = this.state.premade
+    const { image, category, description } = this.state.premade
 
     return (
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{name}</h1>
+          <h1 className="title is-1">{category} Premade Box</h1>
           <hr />
 
           <div className="columns is-multiline">
             <div className="column is-half-desktop is-full-tablet">
-              <figure className="image is-128x128">
+              <figure className="image is-square">
                 <img src={image} alt={name} />
               </figure>
             </div>
 
             <div className="column is-half-desktop is-full-tablet">
-              <p>{description}</p>
+              <p className="largerText">{description}</p>
               <hr />
-              {Auth.isAuthenticated() && <Link to="/basket" className="button">View my Basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="button">Login</Link>}
+              {Auth.isAuthenticated() && <Link to="/basket" className="button is-dark">View my Basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="button is-dark">Login</Link>}
             </div>
           </div>
         </div>

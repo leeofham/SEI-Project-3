@@ -212,7 +212,7 @@ mongoose.connect(dbUri, (err, db) => {
         .then(product => {
           return Box.create([{
             name: 'Premade',
-            image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
+            image: 'https://pbs.twimg.com/profile_images/706705820554113024/nMv9bKOo_400x400.jpg',
             numberOfLegendary: 0,
             numberOfRare: 1,
             numberOfCommon: 2,
@@ -223,7 +223,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel  accessories. Order below and Add to your basket!'
           }, {
             name: 'Premade',
-            image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
+            image: 'https://pbs.twimg.com/profile_images/706705820554113024/nMv9bKOo_400x400.jpg',
             numberOfLegendary: 1,
             numberOfRare: 2,
             numberOfCommon: 3,
@@ -234,7 +234,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel  accessories. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
+            image: 'https://pbs.twimg.com/profile_images/706705820554113024/nMv9bKOo_400x400.jpg',
             numberOfLegendary: 2,
             numberOfRare: 3,
             numberOfCommon: 4,
@@ -245,7 +245,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel accessories. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            image: 'https://sta.uwi.edu/fss/dms/sites/default/files/dms/images/lord-of-the-rings_1.jpg',
             numberOfLegendary: 0,
             numberOfRare: 1,
             numberOfCommon: 2,
@@ -256,7 +256,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            image: 'https://sta.uwi.edu/fss/dms/sites/default/files/dms/images/lord-of-the-rings_1.jpg',
             numberOfLegendary: 1,
             numberOfRare: 2,
             numberOfCommon: 3,
@@ -267,7 +267,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            image: 'https://sta.uwi.edu/fss/dms/sites/default/files/dms/images/lord-of-the-rings_1.jpg',
             numberOfLegendary: 2,
             numberOfRare: 3,
             numberOfCommon: 4,
@@ -278,7 +278,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            image: 'https://pbs.twimg.com/profile_images/418416924138024961/ArB9VMfa.png',
             numberOfLegendary: 0,
             numberOfRare: 1,
             numberOfCommon: 2,
@@ -289,7 +289,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            image: 'https://pbs.twimg.com/profile_images/418416924138024961/ArB9VMfa.png',
             numberOfLegendary: 1,
             numberOfRare: 2,
             numberOfCommon: 3,
@@ -300,7 +300,7 @@ mongoose.connect(dbUri, (err, db) => {
             description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
           },{
             name: 'Premade',
-            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            image: 'https://pbs.twimg.com/profile_images/418416924138024961/ArB9VMfa.png',
             numberOfLegendary: 2,
             numberOfRare: 3,
             numberOfCommon: 4,
