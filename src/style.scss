@@ -28,11 +28,18 @@
 .index {
   height: 100vh;
   text-align: center;
-  background: #86B3D1;
-  height: 93vh;
+  //background: #86B3D1;
+  background: url('/images/indeximage.png');
+  background-size: contain;
   font-family: 'Bangers', cursive;
   letter-spacing: 3px;
-  font-size: 18px;
+  color: black;
+  text-align: center;
+  h2, h3 {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+  }
 }
 
 .is-shady:hover {
@@ -51,6 +58,10 @@ h2, h3 {
 
 h2 {
   text-decoration: underline;
+}
+
+.title{
+  color: white;
 }
 
 #steps {

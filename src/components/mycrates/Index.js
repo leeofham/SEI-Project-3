@@ -28,24 +28,21 @@ class Index extends React.Component {
     return (
       <section className="section index">
         <h2 className="title is-fullwidth-desktop">My Crates</h2>
+        <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
         <div className="container">
-
           <div className="columns is-multiline is-centered">
-
             {this.state.mycrates.map(mycrate =>
 
               (user === mycrate.createdBy) &&
                 <div key={mycrate._id} className="column is-one-quarter-desktop is-one-third-tablet">
-
                   <Link to={`/mycrates/${mycrate._id}`}>
                     <Card {...mycrate} />
                   </Link>
-
                 </div>
             )
             }
           </div>
-          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
+          {<Link to='/mycrates/new'><button className="button"> Make a crate!</button></Link>}
         </div>
       </section>
     )
