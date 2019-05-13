@@ -23,7 +23,7 @@ class Show extends React.Component {
   render() {
 
     if(!this.state.premade) return null
-    const { image, name } = this.state.premade
+    const { image, name, description } = this.state.premade
 
     return (
       <section className="section">
@@ -39,16 +39,10 @@ class Show extends React.Component {
             </div>
 
             <div className="column is-half-desktop is-full-tablet">
-              <article>
-                <p>This box promises:
-                BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy</p>
-                <p>SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains</p>
-                <p>THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel & accessories.</p>
-                <p>Order below and Add to your basket!</p>
-              </article>
-
-              {Auth.isAuthenticated() && <Link to="/basket" className="navbar-item">Add to Basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Please login to add to Basket</Link>}
+              <p>{description}</p>
+              <hr />
+              {Auth.isAuthenticated() && <Link to="/basket" className="button">View my Basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="button">Login</Link>}
             </div>
           </div>
         </div>

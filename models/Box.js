@@ -18,7 +18,7 @@ const boxSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: 'What Box Brand is it?'
+    required: 'Add a description'
   },
   numberOfLegendary: {
     type: Number

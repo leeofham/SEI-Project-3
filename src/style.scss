@@ -1,6 +1,17 @@
 
 @import url(https://fonts.googleapis.com/css?family=Bangers);
 
+.hero {
+  height: 100vh;
+  background: #86B3D1;
+  font-family: 'Bangers', cursive;
+  font-size: 100px;
+
+  p {
+    font-size: 35px
+  }
+}
+
 .card {
     border-radius: 8px;
 
@@ -9,7 +20,13 @@
   }
 }
 
+#boxes {
+  height: 100vh;
+  background: #86B3D1;
+}
+
 .index {
+  height: 100vh;
   text-align: center;
   background: #86B3D1;
   height: 93vh;
@@ -19,14 +36,27 @@
 }
 
 .is-shady:hover {
-box-shadow: 0 15px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+box-shadow: 0 20px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 }
 
-#orderedImg {
-  max-width: 600px;
-  margin: auto;
+.column-style {
+  border: 2px dotted white;
+  height: 20vh;
+  padding-top: 35px;
 }
 
-.hero{
-  height: 100vh;
+h2, h3 {
+  font-size: 20px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+#steps {
+  padding: 0 100px 200px 100px;
+}
+
+.how-it-works-button {
+  padding-top: 100px;
 }
