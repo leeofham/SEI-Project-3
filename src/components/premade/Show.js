@@ -44,9 +44,11 @@ class Show extends React.Component {
 
             <div className="column is-half-desktop is-full-tablet">
               <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p>This box promises:
+                BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy</p>
+                <p>SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains</p>
+                <p>THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel & accessories.</p>
+                <p>Order below and Add to your basket!</p>
               </article>
               <button>Small</button>
               <button>Medium</button>

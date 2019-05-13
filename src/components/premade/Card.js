@@ -12,7 +12,7 @@ const Card = ({ image, category, total }) => {
         </figure>
       </div>
       <div className="card-header">
-        <h4 className="card-header-title">category{category}</h4>
+        <h4 className="card-header-title">Star Wars{category}</h4>
       </div>
       <div className="card-content">
         <div className="content">

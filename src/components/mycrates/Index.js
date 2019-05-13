@@ -30,7 +30,6 @@ class Index extends React.Component {
         <h2 className="title is-fullwidth-desktop">My Crates</h2>
         <div className="container">
 
-
           <div className="columns is-multiline is-centered">
 
             {this.state.mycrates.map(mycrate =>
