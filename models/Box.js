@@ -12,6 +12,14 @@ const boxSchema = new mongoose.Schema({
     type: Number,
     required: 'Total number of items in box'
   },
+  category: {
+    type: String,
+    required: 'What Brand have you chosen?'
+  },
+  description: {
+    type: String,
+    required: 'What Box Brand is it?'
+  },
   numberOfLegendary: {
     type: Number
   },
