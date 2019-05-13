@@ -9,26 +9,31 @@ class Show extends React.Component {
     super(props)
 
     this.state = {
-      premade: null,
+      box: null,
       product: []
     }
+  }
 
+  canModify(){
+    return Auth.isAuthenticated() && Auth.getPayload().sub === this.state.box.createdBy
   }
 
   componentDidMount() {
-    axios.get(`/api/premade/${this.props.match.params.id}`)
-      .then(res => this.setState({ premade: res.data}))
+    axios.get(`/api/boxes/${this.props.match.params.id}`)
+      .then(res => this.setState({ box: res.data}))
   }
 
   render() {
-
-    if(!this.state.premade) return null
-    const { image, name, description } = this.state.premade
+    if(!this.state.box) return null
+    const { image, name, description } = this.state.box
 
     return (
       <section className="section">
         <div className="container">
           <h1 className="title is-1">{name}</h1>
+          {this.canModify() &&
+            <Link to={`/mycrates/${this.state.box._id}/edit`} className="button is-primary">Edit</Link>
+          }
           <hr />
 
           <div className="columns is-multiline">
