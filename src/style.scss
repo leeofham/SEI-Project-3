@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+.card {
+    border-radius: 8px;
+
+  .image img {
+    border-radius: 8px;
+  }
+}
+
+.index {
+  text-align: center;
+  background: #86B3D1;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.is-shady:hover {
+box-shadow: 0 15px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+}

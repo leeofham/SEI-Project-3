@@ -7,18 +7,27 @@ class Show extends React.Component {
     super(props)
 
     this.state = {
-      premade: null
+      premade: null,
+      product: []
     }
 
   }
 
   componentDidMount() {
-    axios.get(`/api/premade/${this.props.match.params.id}`)
-      .then(res => this.setState({ premade: res.data}))
+    Promise.props({
+      premade: axios.get(`/api/premade/${this.props.match.params.id}`).then(res =>res.data),
+      product: axios.get(`/api/product/${this.props.match.params.id}`).then(res => res.data)
+    })
+      .then(res => {
+        this.setState({ premade: res.premade, product: res.product })
+      })
   }
 
 
   render() {
+    console.log(this.state.product)
+    console.log(this.state.premade)
+
     if(!this.state.premade) return null
     const { image, name } = this.state.premade
 

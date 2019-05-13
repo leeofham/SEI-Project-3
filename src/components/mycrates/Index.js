@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Auth from '../../lib/Auth'
+// import Auth from '../../lib/Auth'
 
 import Card from './Card'
 
@@ -23,12 +23,11 @@ class Index extends React.Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section index">
+        <h2 className="title is-fullwidth-desktop">My Crates</h2>
         <div className="container">
-          {Auth.isAuthenticated() && <Link to="/mycrates" className="button">My Crates</Link>}
-          <hr />
-          {<Link to='/mycrates/new'><button className="button"> Create a Crate!</button></Link>}
-          <div className="columns is-multiline">
+
+          <div className="columns is-multiline is-centered">
             {this.state.mycrates.map(mycrate =>
               <div key={mycrate._id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/mycrates/${mycrate._id}`}>
@@ -38,6 +37,7 @@ class Index extends React.Component {
             )}
 
           </div>
+          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
         </div>
       </section>
     )

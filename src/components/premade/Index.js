@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Auth from '../../lib/Auth'
+// import Auth from '../../lib/Auth'
 
 import Card from './Card'
 
@@ -25,11 +25,10 @@ class Index extends React.Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section index">
+        <h2 className="title is-fullwidth-desktop">Choose a premade crate...</h2>
         <div className="container">
-          {Auth.isAuthenticated() && <Link to="/premade" className="button">Premade Box</Link>}
-          <hr />
-          <div className="columns is-multiline">
+          <div className="columns is-multiline is-centered">
             {this.state.premade.map(premade =>
               <div key={premade._id} className="column is-one-quarter-desktop is-one-third-tablet">
                 <Link to={`/premade/${premade._id}`}>
