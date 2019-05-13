@@ -41,7 +41,7 @@ class Show extends React.Component {
             <div className="column is-half-desktop is-full-tablet">
               <p>{description}</p>
               <hr />
-              {Auth.isAuthenticated() && <Link to="/basket" className="button is-dark">View my Basket</Link>}
+              {Auth.isAuthenticated() && <Link to="/ordered" className="button is-dark">Buy Now!</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="button is-dark">Login</Link>}
             </div>
           </div>
