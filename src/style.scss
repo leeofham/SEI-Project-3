@@ -14,8 +14,35 @@
   color: white;
 
   p {
-    font-size: 35px
+    font-size: 35px;
+    color: black;
   }
+}
+
+html{
+  height: 100vh;
+  background-color: #86B3D1;
+}
+nav.navbar.is-dark{
+  background-color: black;
+}
+
+a.button.button.is-dark{
+  background-color: #474853;
+}
+
+a.button.button.is-dark:hover{
+  background-color: #252631;
+}
+
+
+
+img{
+  max-width: 30vw;
+}
+
+hr{
+  background: black;
 }
 
 #hero-overlay {
