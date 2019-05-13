@@ -52,8 +52,8 @@ class Show extends React.Component {
                 <p>THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel & accessories.</p>
                 <p>Order below and Add to your basket!</p>
               </article>
-              {Auth.isAuthenticated() && <Link to="/basket" className="navbar-item">View my Basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
+              {Auth.isAuthenticated() && <Link to="/basket" className="navbar-item">Add to Basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Please Login to add to basket</Link>}
 
               <hr />
             </div>

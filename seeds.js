@@ -218,7 +218,9 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfCommon: 2,
             total: 3,
             contents: [product[0], product[1], product[2]],
-            createdBy: user
+            createdBy: user,
+            category: 'Star Wars',
+            description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel  accessories. Order below and Add to your basket!'
           }, {
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -227,7 +229,9 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfCommon: 3,
             total: 6,
             contents: [product[0], product[1], product[2], product[3], product[4], product[5]],
-            createdBy: user
+            createdBy: user,
+            category: 'Star Wars',
+            description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel  accessories. Order below and Add to your basket!'
           },{
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -236,8 +240,77 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfCommon: 4,
             total: 9,
             contents: [product[0], product[1], product[2], product[3], product[4], product[5], product[6], product[7], product[8]],
-            createdBy: user
-          }])
+            createdBy: user,
+            category: 'Star Wars',
+            description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel accessories. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            numberOfLegendary: 0,
+            numberOfRare: 1,
+            numberOfCommon: 2,
+            total: 3,
+            contents: [product[9], product[10], product[11]],
+            createdBy: user,
+            category: 'Lord of The Rings',
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            numberOfLegendary: 1,
+            numberOfRare: 2,
+            numberOfCommon: 3,
+            total: 6,
+            contents: [product[12], product[13], product[14], product[15], product[16], product[17]],
+            createdBy: user,
+            category: 'Lord of The Rings',
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            numberOfLegendary: 2,
+            numberOfRare: 3,
+            numberOfCommon: 4,
+            total: 9,
+            contents: [product[9], product[10], product[11], product[12], product[13], product[14], product[15], product[16], product[17]],
+            createdBy: user,
+            category: 'Lord of The Rings',
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            numberOfLegendary: 0,
+            numberOfRare: 1,
+            numberOfCommon: 2,
+            total: 3,
+            contents: [product[18], product[19], product[20]],
+            createdBy: user,
+            category: 'Harry Potter',
+            description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            numberOfLegendary: 1,
+            numberOfRare: 2,
+            numberOfCommon: 3,
+            total: 6,
+            contents: [product[21], product[22], product[23], product[24], product[25], product[26]],
+            createdBy: user,
+            category: 'Harry Potter',
+            description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            numberOfLegendary: 2,
+            numberOfRare: 3,
+            numberOfCommon: 4,
+            total: 9,
+            contents: [product[18], product[19], product[20], product[21], product[22], product[23], product[24], product[25], product[26]],
+            createdBy: user,
+            category: 'Harry Potter',
+            description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
+          }
+          ])
         })
     })
     .then(() => mongoose.connection.close()) // disconnect from the database
