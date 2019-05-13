@@ -31,10 +31,10 @@ class App extends React.Component{
         <div>
           <Navbar />
           <Switch>
+            <Route path="/mycrates/new" component={MyCratesNew} />
             <Route path="/mycrates/:id/edit" component={MyCratesEdit} />
             <Route path="/mycrates/:id" component={MyCratesShow} />
             <Route path="/premade/:id" component={PremadeShow} />
-            <Route path="/mycrates/new" component={MyCratesNew} />
             <Route path="/mycrates" component={MyCratesIndex} />
             <Route path="/ordered" component={BoxesOrdered} />
             <Route path="/premade" component={PremadeIndex} />
