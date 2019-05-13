@@ -16,6 +16,7 @@ import BoxesChoice from './components/common/Boxes'
 import MyCratesIndex from './components/mycrates/Index'
 import MyCratesNew from './components/mycrates/New'
 import MyCratesEdit from './components/mycrates/Edit'
+import MyCratesShow from './components/mycrates/Show'
 
 import BoxesOrdered from './components/common/orderedBox'
 
@@ -30,9 +31,10 @@ class App extends React.Component{
         <div>
           <Navbar />
           <Switch>
+            <Route path="/mycrates/:id/edit" component={MyCratesEdit} />
+            <Route path="/mycrates/:id" component={MyCratesShow} />
             <Route path="/premade/:id" component={PremadeShow} />
             <Route path="/mycrates/new" component={MyCratesNew} />
-            <Route path="/mycrates/:id" component={MyCratesEdit} />
             <Route path="/mycrates" component={MyCratesIndex} />
             <Route path="/ordered" component={BoxesOrdered} />
             <Route path="/premade" component={PremadeIndex} />
