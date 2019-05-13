@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Auth from '../../lib/Auth'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
 
 
 import Card from './Card'
@@ -29,23 +31,23 @@ class Index extends React.Component {
       <section className="section index">
         <h2 className="title is-fullwidth-desktop">My Crates</h2>
         <div className="container">
-
-          <div className="columns is-multiline is-centered">
-
+          <Carousel
+            showThumbs={false}
+            showArrows={true}
+            autoPlay={true}
+            interval={2000}
+            stopOnHover={true}
+          >
             {this.state.mycrates.map(mycrate =>
-
               (user === mycrate.createdBy) &&
-                <div key={mycrate._id} className="column is-one-quarter-desktop is-one-third-tablet">
-
-                  <Link to={`/mycrates/${mycrate._id}`}>
-                    <Card {...mycrate} />
-                  </Link>
-
-                </div>
+              <div id="carousel" key={mycrate._id}>
+                <Link to={`/mycrates/${mycrate._id}`}>
+                  <Card {...mycrate} />
+                </Link>
+              </div>
             )
             }
-          </div>
-          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
+          </Carousel>
         </div>
       </section>
     )
@@ -53,3 +55,4 @@ class Index extends React.Component {
 }
 
 export default Index
+// {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
