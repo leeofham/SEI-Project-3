@@ -47,6 +47,32 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         </div>
         {errors.total && <div className="help is-danger">{errors.total}</div>}
       </div>
+      <div className="field">
+        <label className="label">Genre and Category</label>
+        <div className="control">
+          <input
+            className="input"
+            name="category"
+            placeholder="eg: Star Wars Film"
+            onChange={handleChange}
+            value={data.category || ''}
+          />
+        </div>
+        {errors.image && <div className="help is-danger">{errors.image}</div>}
+      </div>
+      <div className="field">
+        <label className="label">Description</label>
+        <div className="control">
+          <input
+            className="input"
+            name="description"
+            placeholder="This is my Star Wars box"
+            onChange={handleChange}
+            value={data.description || ''}
+          />
+        </div>
+        {errors.image && <div className="help is-danger">{errors.image}</div>}
+      </div>
 
       <button className="button is-primary">Submit</button>
     </form>
