@@ -14,13 +14,8 @@ class Show extends React.Component {
   }
 
   componentDidMount() {
-    Promise.props({
-      premade: axios.get(`/api/premade/${this.props.match.params.id}`).then(res =>res.data),
-      product: axios.get(`/api/product/${this.props.match.params.id}`).then(res => res.data)
-    })
-      .then(res => {
-        this.setState({ premade: res.premade, product: res.product })
-      })
+    axios.get(`/api/premade/${this.props.match.params.id}`)
+      .then(res => this.setState({ premade: res.data}))
   }
 
 
