@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Card = ({ name, image, numberOfLegendary, contents }) => {
-  console.log(contents)
+const Card = ({ name, image, category, total }) => {
 
   return (
     <div className="card is-shady">
@@ -11,14 +10,14 @@ const Card = ({ name, image, numberOfLegendary, contents }) => {
         </figure>
       </div>
       <div className="card-header">
-        <h3 className="card-header-title">This should show brand: Star Wars {numberOfLegendary}</h3>
+        <h3 className="card-header-title">{name}</h3>
       </div>
       <div className="card-header">
-        <h4 className="card-header-title">This should show category: {contents[0].category} </h4>
+        <h4 className="card-header-title">{category} </h4>
       </div>
       <div className="card-content">
         <div className="content">
-          <p>Brand {name}</p>
+          <p>Your {name} box with {total} items</p>
         </div>
       </div>
     </div>
