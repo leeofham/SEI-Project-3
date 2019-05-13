@@ -1,58 +1,30 @@
 
 @import url(https://fonts.googleapis.com/css?family=Bangers);
 
-html{
-  height: 100vh;
-  background-color: #86B3D1;
-}
-nav.navbar.is-dark{
-  background-color: #474853;
-}
-
-a.button.button.is-dark{
-  background-color: #474853;
-}
-
-a.button.button.is-dark:hover{
-  background-color: #363742;
-}
-
-
-
-img{
-  max-width: 30vw;
-}
-
-hr{
-  background: black;
-}
-
-p{
-  color: black;
-}
-
 .hero {
+  height: 100vh;
   background: #86B3D1;
   font-family: 'Bangers', cursive;
   font-size: 100px;
+  background: url('/images/background2.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
 
   p {
     font-size: 35px
   }
 }
 
-nav.navbar.is-dark{
-  font-family: 'Bangers', cursive;
-  letter-spacing: 1.5px;
+#hero-overlay {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3h) );
+  background-blend-mode: 'darken'
 }
 
 .card {
-    border: solid black 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    border-radius: 8px;
 
   .image img {
     border-radius: 8px;
@@ -60,16 +32,27 @@ nav.navbar.is-dark{
 }
 
 #boxes {
-  height: 100%;
+  height: 100vh;
   background: #86B3D1;
 }
 
 .index {
+  height: 100vh;
   text-align: center;
   background: #86B3D1;
+  height: 93vh;
   font-family: 'Bangers', cursive;
   letter-spacing: 3px;
   font-size: 18px;
+
+  img {
+    max-width: 200px;
+  }
+
+}
+
+.is-shady:hover {
+box-shadow: 0 20px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 }
 
 .column-style {
@@ -80,6 +63,7 @@ nav.navbar.is-dark{
 
 h2, h3 {
   font-size: 20px;
+  color: white;
 }
 
 h2 {

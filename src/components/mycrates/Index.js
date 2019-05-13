@@ -30,6 +30,7 @@ class Index extends React.Component {
     return (
       <section className="section index">
         <h2 className="title is-fullwidth-desktop">My Crates</h2>
+        <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
         <div className="container">
           <Carousel
             showThumbs={false}

@@ -2,16 +2,25 @@ import React from 'react'
 import { HashLink as Hash } from 'react-router-hash-link'
 
 const Home = () => {
+  const heroBG = {
+    background: 'linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) ), url(../images/background2.png)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundBlendMode: 'darken'
+  }
   return (
     <div className="div">
-      <section className="hero is-fullheight-with-navbar">
+      <section className="hero is-fullheight-with-navbar" style={heroBG}>
         <div className="hero-body">
-          <div className="container has-text-centered ">
-            <h1> Welcome to Nerd Crate! </h1>
-            <h2> A place to find your favourite merchandise </h2>
-            <Hash smooth to="#how-it-works">
-              <button className="button">How it works...</button>
-            </Hash>
+          <div>
+
+            <div className="container has-text-centered ">
+              <h1> Welcome to Nerd Crate! </h1>
+              <p> A place to find your favourite merchandise </p>
+              <Hash smooth to="#how-it-works">
+                <button className="button">How it works...</button>
+              </Hash>
+            </div>
           </div>
         </div>
       </section>
