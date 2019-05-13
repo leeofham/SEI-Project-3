@@ -1,6 +1,6 @@
 import React from 'react'
 
-const orderedBox = () => {
+const OrderedBox = () => {
   return(
     <section className="hero is-fullheight-with-navbar">
       <div className="hero-body">
@@ -16,4 +16,4 @@ const orderedBox = () => {
   )
 }
 
-export default orderedBox
+export default OrderedBox

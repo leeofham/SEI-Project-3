@@ -17,9 +17,9 @@ function showRoute(req, res, next){
 function createRoute(req, res, next) {
 
   req.body.createdBy = req.currentUser
+
   Box.create(req.body)
     .then(box => {
-      console.log(req.body)
       res.status(201).json(box) // send it as JSON
     })
     .catch(next) // handle our errors

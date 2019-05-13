@@ -82,9 +82,134 @@ mongoose.connect(dbUri, (err, db) => {
         image: 'https://images-na.ssl-images-amazon.com/images/I/513XXUBn3RL._SY355_.jpg',
         rarity: 'Common',
         createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'T-shirt',
+        image: 'https://s1.thcdn.com/productimg/1600/1600/11638190-1824536173201541.png',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'Pillow',
+        image: 'https://cdn.shopify.com/s/files/1/2597/4248/products/lotrnwpil02_250x250@2x.jpg?v=1527089994',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'jewellry',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3qWENfqq0PcJEFVCuwbbXyiZlTkNvipFJYsbM5KaEVgbOXLg',
+        rarity: 'Rare',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'Poster',
+        image: 'https://cdn.basememorabilia.co.uk/wp-content/uploads/2017/10/The-Lord-of-the-Rings-Two-Towers-New-Line-2002.-British-Quad-3022-X-4022.jpg',
+        rarity: 'Legendary',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'model',
+        image: 'https://s1.thcdn.com/productimg/1600/1600/12054228-1104653302436255.jpg',
+        rarity: 'Rare',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'chess',
+        image: 'https://www.worldchesspieces.com/wp-content/uploads/2018/12/Artschess-Lord-of-the-Rings-with-Resin-Pieces.jpg',
+        rarity: 'Legendary',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'cards',
+        image: 'https://thumbs.worthpoint.com/zoom/images2/1/1116/14/lot-lord-rings-towers-fellowship-ring_1_8f184d55ef6d9a098a02fffaf9f50e0a.jpg',
+        rarity: 'Rare',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'keyring',
+        image: 'https://cdn.shopify.com/s/files/1/0552/1401/products/31814_Aragorn_LOTR_KC_GLAM.png?v=1529077445',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'mugs',
+        image: 'https://www.theonering.net/torwp/wp-content/uploads/2014/02/prancing-pony.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Ward',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/6242b981.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Necklace',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/02976f5d.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Scarf',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/48162f25.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Backpack',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/9aed03c3.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Book',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/12d14c37.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Mug',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/c78a3234.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Flag',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/2a8ce8b1.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Umbrella',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/4cbf5a36.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Notebook',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/eb3e269f.jpg',
+        rarity: 'Common',
+        createdBy: user
       }])
         .then(product => {
-
           return Box.create([{
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -93,7 +218,9 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfCommon: 2,
             total: 3,
             contents: [product[0], product[1], product[2]],
-            createdBy: user
+            createdBy: user,
+            category: 'Star Wars',
+            description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel  accessories. Order below and Add to your basket!'
           }, {
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -102,7 +229,9 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfCommon: 3,
             total: 6,
             contents: [product[0], product[1], product[2], product[3], product[4], product[5]],
-            createdBy: user
+            createdBy: user,
+            category: 'Star Wars',
+            description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel  accessories. Order below and Add to your basket!'
           },{
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -111,8 +240,77 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfCommon: 4,
             total: 9,
             contents: [product[0], product[1], product[2], product[3], product[4], product[5], product[6], product[7], product[8]],
-            createdBy: user
-          }])
+            createdBy: user,
+            category: 'Star Wars',
+            description: 'This box promises BE A REBEL Wear officially licensed items inspired by Star Wars the Original Trilogy. SAVE THE GALAXY Channel your inner Rebel with premium items from the Star Wars Universe Villains. THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel accessories. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            numberOfLegendary: 0,
+            numberOfRare: 1,
+            numberOfCommon: 2,
+            total: 3,
+            contents: [product[9], product[10], product[11]],
+            createdBy: user,
+            category: 'Lord of The Rings',
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            numberOfLegendary: 1,
+            numberOfRare: 2,
+            numberOfCommon: 3,
+            total: 6,
+            contents: [product[12], product[13], product[14], product[15], product[16], product[17]],
+            createdBy: user,
+            category: 'Lord of The Rings',
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg',
+            numberOfLegendary: 2,
+            numberOfRare: 3,
+            numberOfCommon: 4,
+            total: 9,
+            contents: [product[9], product[10], product[11], product[12], product[13], product[14], product[15], product[16], product[17]],
+            createdBy: user,
+            category: 'Lord of The Rings',
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            numberOfLegendary: 0,
+            numberOfRare: 1,
+            numberOfCommon: 2,
+            total: 3,
+            contents: [product[18], product[19], product[20]],
+            createdBy: user,
+            category: 'Harry Potter',
+            description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            numberOfLegendary: 1,
+            numberOfRare: 2,
+            numberOfCommon: 3,
+            total: 6,
+            contents: [product[21], product[22], product[23], product[24], product[25], product[26]],
+            createdBy: user,
+            category: 'Harry Potter',
+            description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
+          },{
+            name: 'Premade',
+            image: 'https://blog.colourfulrebel.com/en/files/2018/10/harry_potter-2.jpg',
+            numberOfLegendary: 2,
+            numberOfRare: 3,
+            numberOfCommon: 4,
+            total: 9,
+            contents: [product[18], product[19], product[20], product[21], product[22], product[23], product[24], product[25], product[26]],
+            createdBy: user,
+            category: 'Harry Potter',
+            description: 'Exclusive and officially licensed Harry Potter & Fantastic Beasts gear!. Magical items in every crate. Get cool Wizarding gear and join your Hogwarts House! Join the wizarding world with this fantastic crate. Order below and Add to your basket!'
+          }
+          ])
         })
     })
     .then(() => mongoose.connection.close()) // disconnect from the database
