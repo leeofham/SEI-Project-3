@@ -26,11 +26,13 @@ class Index extends React.Component {
     const user = Auth.getPayload().sub
 
     return (
-      <section className="section">
+      <section className="section index">
+        <h2 className="title is-fullwidth-desktop">My Crates</h2>
         <div className="container">
-          <hr />
-          {<Link to='/mycrates/new'><button className="button"> Create a Crate!</button></Link>}
-          <div className="columns is-multiline">
+
+
+          <div className="columns is-multiline is-centered">
+
             {this.state.mycrates.map(mycrate =>
 
               (user === mycrate.createdBy) &&
@@ -44,6 +46,7 @@ class Index extends React.Component {
             )
             }
           </div>
+          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
         </div>
       </section>
     )
