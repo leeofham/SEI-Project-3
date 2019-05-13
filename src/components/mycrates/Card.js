@@ -5,7 +5,7 @@ const Card = ({ name, image, category, total }) => {
   return (
     <div className="card is-shady">
       <div className="card-image">
-        <figure className="image is-128x123">
+        <figure className="image is-128x128">
           <img src={image} alt={name} />
         </figure>
       </div>

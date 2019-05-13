@@ -1,5 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Bangers);
+$background: #86B3D1;
 
 .hero {
   height: 100vh;
@@ -24,7 +25,7 @@ html{
   background-color: #86B3D1;
 }
 nav.navbar.is-dark{
-  background-color: black;
+  background-color: #222222;
 }
 
 a.button.button.is-dark{
@@ -33,12 +34,6 @@ a.button.button.is-dark{
 
 a.button.button.is-dark:hover{
   background-color: #252631;
-}
-
-
-
-img{
-  max-width: 30vw;
 }
 
 hr{
@@ -69,18 +64,14 @@ hr{
 }
 
 .index {
-  height: 100vh;
   text-align: center;
-  background: #86B3D1;
-  height: 93vh;
+  background: $background;
   font-family: 'Bangers', cursive;
   letter-spacing: 3px;
-  font-size: 18px;
-
+  color: black;
   img {
-    max-width: 200px;
+    max-width: 256px;
   }
-
 }
 
 .is-shady:hover {
