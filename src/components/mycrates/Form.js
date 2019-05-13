@@ -40,7 +40,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
             >
               <option value="" disabled>Please choose...</option>
               <option value="3">Small</option>
-              <option value="5">Medium</option>
+              <option value="6">Medium</option>
               <option value="9">Large</option>
             </select>
           </div>

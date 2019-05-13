@@ -6,7 +6,7 @@ const orderedBox = () => {
       <div className="hero-body">
         <div className="container">
           <div className="container">
-            <figure className="image 500-500">
+            <figure className="image" id="orderedImg">
               <img src="../images/nerdCrate.jpg" />
             </figure>
           </div>

@@ -92,7 +92,8 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfRare: 1,
             numberOfCommon: 2,
             total: 3,
-            contents: [product[0], product[1], product[2]]
+            contents: [product[0], product[1], product[2]],
+            createdBy: user
           }, {
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -100,7 +101,8 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfRare: 2,
             numberOfCommon: 3,
             total: 6,
-            contents: [product[0], product[1], product[2], product[3], product[4], product[5]]
+            contents: [product[0], product[1], product[2], product[3], product[4], product[5]],
+            createdBy: user
           },{
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
@@ -108,7 +110,8 @@ mongoose.connect(dbUri, (err, db) => {
             numberOfRare: 3,
             numberOfCommon: 4,
             total: 9,
-            contents: [product[0], product[1], product[2], product[3], product[4], product[5], product[6], product[7], product[8]]
+            contents: [product[0], product[1], product[2], product[3], product[4], product[5], product[6], product[7], product[8]],
+            createdBy: user
           }])
         })
     })
