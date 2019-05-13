@@ -11,6 +11,38 @@ body {
 .hero {
   height: 100vh;
   background: $background;
+}
+
+html{
+  height: 100vh;
+  background-color: #86B3D1;
+}
+nav.navbar.is-dark{
+  background-color: #474853;
+}
+
+a.button.button.is-dark{
+  background-color: #474853;
+}
+
+a.button.button.is-dark:hover{
+  background-color: #363742;
+}
+
+img{
+  max-width: 30vw;
+}
+
+hr{
+  background: black;
+}
+
+p{
+  color: black;
+}
+
+.hero {
+  background: #86B3D1;
   font-family: 'Bangers', cursive;
   font-size: 100px;
 
@@ -19,8 +51,18 @@ body {
   }
 }
 
+nav.navbar.is-dark{
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1.5px;
+}
+
 .card {
-    border-radius: 8px;
+    border: solid black 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 
   .image img {
     border-radius: 8px;
@@ -33,17 +75,20 @@ body {
 }
 
 .index {
-  height: 100vh;
   text-align: center;
   background: $background;
   height: 93vh;
+  background: url('/images/indeximage.png');
+  background-size: contain;
   font-family: 'Bangers', cursive;
   letter-spacing: 3px;
-  font-size: 18px;
-}
-
-.is-shady:hover {
-box-shadow: 0 20px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+  color: black;
+  text-align: center;
+  h2, h3 {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+  }
 }
 
 .column-style {
@@ -58,6 +103,10 @@ h2, h3 {
 
 h2 {
   text-decoration: underline;
+}
+
+.title{
+  color: white;
 }
 
 #steps {

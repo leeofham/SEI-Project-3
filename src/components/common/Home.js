@@ -8,7 +8,7 @@ const Home = () => {
         <div className="hero-body">
           <div className="container has-text-centered ">
             <h1> Welcome to Nerd Crate! </h1>
-            <p> A place to find your favourite merchandise </p>
+            <h2> A place to find your favourite merchandise </h2>
             <Hash smooth to="#how-it-works">
               <button className="button">How it works...</button>
             </Hash>
