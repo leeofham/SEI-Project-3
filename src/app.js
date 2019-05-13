@@ -17,7 +17,7 @@ import MyCratesIndex from './components/mycrates/Index'
 import MyCratesNew from './components/mycrates/New'
 import MyCratesEdit from './components/mycrates/Edit'
 
-import BoxesOrdered from './components/common/orderedBox'
+import BoxesOrdered from './components/common/OrderedBox'
 
 
 import 'bulma'

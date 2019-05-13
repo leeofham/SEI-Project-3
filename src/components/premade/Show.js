@@ -20,7 +20,6 @@ class Show extends React.Component {
       .then(res => this.setState({ premade: res.data}))
   }
 
-
   render() {
     console.log(this.state.product)
     console.log(this.state.premade)
@@ -52,8 +51,10 @@ class Show extends React.Component {
                 <p>THE FORCE IS WITH YOU Bring the Star Wars galaxy to life with authentic apparel & accessories.</p>
                 <p>Order below and Add to your basket!</p>
               </article>
-              {Auth.isAuthenticated() && <Link to="/basket" className="navbar-item">View my Basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
+              
+              {Auth.isAuthenticated() && <Link to="/basket" className="navbar-item">Add to Basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Please login to add to Basket</Link>}
+
 
               <hr />
             </div>
