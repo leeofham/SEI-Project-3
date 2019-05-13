@@ -1,9 +1,16 @@
-
 @import url(https://fonts.googleapis.com/css?family=Bangers);
+
+$background: #86B3D1;
+
+body {
+  background: $background;
+  height: 100vh;
+  overflow: auto;
+}
 
 .hero {
   height: 100vh;
-  background: #86B3D1;
+  background: $background;
   font-family: 'Bangers', cursive;
   font-size: 100px;
 
@@ -22,13 +29,13 @@
 
 #boxes {
   height: 100vh;
-  background: #86B3D1;
+  background: $background;
 }
 
 .index {
   height: 100vh;
   text-align: center;
-  background: #86B3D1;
+  background: $background;
   height: 93vh;
   font-family: 'Bangers', cursive;
   letter-spacing: 3px;
@@ -59,4 +66,18 @@ h2 {
 
 .how-it-works-button {
   padding-top: 100px;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-shadow: 5px 4px #558ABB;
+}
+
+.largerText {
+  font-size: 25px;
+  background-color: rgba(39, 119, 247,.2);
+  box-shadow: 20px 15px 6px rgba(0,0,0,.5);
+  padding: 5px;
 }
