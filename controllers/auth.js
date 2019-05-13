@@ -23,7 +23,6 @@ function loginRoute(req, res, next) {
     .catch(next)
 }
 
-
 module.exports = {
   register: registerRoute,
   login: loginRoute

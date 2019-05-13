@@ -83,6 +83,69 @@ mongoose.connect(dbUri, (err, db) => {
         rarity: 'Common',
         createdBy: user
       },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'T-shirt',
+        image: 'https://s1.thcdn.com/productimg/1600/1600/11638190-1824536173201541.png',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'Pillow',
+        image: 'https://cdn.shopify.com/s/files/1/2597/4248/products/lotrnwpil02_250x250@2x.jpg?v=1527089994',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'jewellry',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3qWENfqq0PcJEFVCuwbbXyiZlTkNvipFJYsbM5KaEVgbOXLg',
+        rarity: 'Rare',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'Poster',
+        image: 'https://cdn.basememorabilia.co.uk/wp-content/uploads/2017/10/The-Lord-of-the-Rings-Two-Towers-New-Line-2002.-British-Quad-3022-X-4022.jpg',
+        rarity: 'Legendary',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'model',
+        image: 'https://s1.thcdn.com/productimg/1600/1600/12054228-1104653302436255.jpg',
+        rarity: 'Rare',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'chess',
+        image: 'https://www.worldchesspieces.com/wp-content/uploads/2018/12/Artschess-Lord-of-the-Rings-with-Resin-Pieces.jpg',
+        rarity: 'Legendary',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'cards',
+        image: 'https://thumbs.worthpoint.com/zoom/images2/1/1116/14/lot-lord-rings-towers-fellowship-ring_1_8f184d55ef6d9a098a02fffaf9f50e0a.jpg',
+        rarity: 'Rare',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'keyring',
+        image: 'https://cdn.shopify.com/s/files/1/0552/1401/products/31814_Aragorn_LOTR_KC_GLAM.png?v=1529077445',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Lord Of The Rings',
+        category: 'Film',
+        productType: 'mugs',
+        image: 'https://www.theonering.net/torwp/wp-content/uploads/2014/02/prancing-pony.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
         brandName: 'Harry Potter',
         category: 'Film',
         productType: 'Ward',
@@ -147,7 +210,6 @@ mongoose.connect(dbUri, (err, db) => {
         createdBy: user
       }])
         .then(product => {
-
           return Box.create([{
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/676197614040145920/Hr44AVk6.jpg',
