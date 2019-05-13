@@ -6,10 +6,21 @@
   background: #86B3D1;
   font-family: 'Bangers', cursive;
   font-size: 100px;
+  background: url('/images/background2.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
 
   p {
     font-size: 35px
   }
+}
+
+#hero-overlay {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) );
+  background-blend-mode: 'darken'
 }
 
 .card {
@@ -33,6 +44,11 @@
   font-family: 'Bangers', cursive;
   letter-spacing: 3px;
   font-size: 18px;
+
+  img {
+    max-width: 200px;
+  }
+
 }
 
 .is-shady:hover {
@@ -47,6 +63,7 @@ box-shadow: 0 20px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 
 h2, h3 {
   font-size: 20px;
+  color: white;
 }
 
 h2 {
