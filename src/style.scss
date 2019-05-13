@@ -24,7 +24,12 @@
 }
 
 .card {
-    border-radius: 8px;
+    border: solid black 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 
   .image img {
     border-radius: 8px;
