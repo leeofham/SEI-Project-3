@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+import Auth from '../../lib/Auth'
 
 class Show extends React.Component {
 
@@ -48,9 +50,9 @@ class Show extends React.Component {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
               </article>
-              <button>Small</button>
-              <button>Medium</button>
-              <button>Large</button>
+              {Auth.isAuthenticated() && <Link to="/basket" className="navbar-item">View my Basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
+
               <hr />
             </div>
           </div>

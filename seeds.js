@@ -82,6 +82,69 @@ mongoose.connect(dbUri, (err, db) => {
         image: 'https://images-na.ssl-images-amazon.com/images/I/513XXUBn3RL._SY355_.jpg',
         rarity: 'Common',
         createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Ward',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/6242b981.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Necklace',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/02976f5d.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Scarf',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/48162f25.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Backpack',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/9aed03c3.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Book',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/12d14c37.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Mug',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/c78a3234.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Flag',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/2a8ce8b1.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Umbrella',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/4cbf5a36.jpg',
+        rarity: 'Common',
+        createdBy: user
+      },{
+        brandName: 'Harry Potter',
+        category: 'Film',
+        productType: 'Notebook',
+        image: 'https://shop.wbstudiotour.co.uk/images/dynamic/330x330/eb3e269f.jpg',
+        rarity: 'Common',
+        createdBy: user
       }])
         .then(product => {
 

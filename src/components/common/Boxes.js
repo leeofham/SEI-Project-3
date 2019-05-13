@@ -14,7 +14,7 @@ class BoxesChoice extends React.Component {
               <Link to={'/premade'} className="button is-link is-outlined is-large">Premade Box</Link>
             </div>
             <div className="level-right">
-              <Link to={'/mystery'}  className="button is-link is-outlined is-large">Mystery Box</Link>
+              <Link to={'/mycrates'}  className="button is-link is-outlined is-large">Create your own Box</Link>
             </div>
           </div>
         </div>
