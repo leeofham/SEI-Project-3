@@ -20,7 +20,12 @@ class Basket extends React.Component {
     if( JSON.parse(localStorage.getItem('Basket'))) {
       basket = JSON.parse(localStorage.getItem('Basket'))
     }
-    this.setState({ basket: [...basket, newItem ]}, () => localStorage.setItem('Basket', JSON.stringify(this.state.basket)))
+    if(!newItem){
+      this.setState({ basket: [...basket] })
+    } else {
+      this.setState({ basket: [...basket, newItem ]}, () => localStorage.setItem('Basket', JSON.stringify(this.state.basket)))
+    }
+
   }
 
   render() {
@@ -32,14 +37,15 @@ class Basket extends React.Component {
       <section id="boxes" className="section">
         <h1 className="title is-1">Your basket is empty</h1>
 
-        <p>
-          {this.state.basket.map((basket, index) =>
-            <div id="basket" key={basket[index]._id}>
-              <Card {...basket} />
+        <div>
+
+          {this.state.basket.map((product, index) =>
+            <div className="basket" key={index}>
+              <Card {...product} />
 
             </div>
           )}
-        </p>
+        </div>
 
         <Link to={'/boxes'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
