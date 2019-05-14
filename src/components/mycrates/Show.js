@@ -12,6 +12,9 @@ class Show extends React.Component {
       box: null,
       product: []
     }
+
+    this.setPrice = this.setPrice.bind(this)
+
   }
 
   canModify(){
@@ -21,6 +24,7 @@ class Show extends React.Component {
   componentDidMount() {
     axios.get(`/api/boxes/${this.props.match.params.id}`)
       .then(res => this.setState({ box: res.data}))
+      .then(this.setPrice)
   }
 
   handleSubmit(e) {
@@ -30,9 +34,9 @@ class Show extends React.Component {
   }
 
   setPrice(){
-    if(this.state.premade.total === 3){
-      this.setState({...this.state.premade,  price: 10})
-    } else if(this.state.premade.total === 6){
+    if(this.state.box.total === 3){
+      this.setState({...this.state.box,  price: 10})
+    } else if(this.state.box.total === 6){
       this.setState({price: 15})
     } else {
       this.setState({price: 25})
@@ -43,6 +47,7 @@ class Show extends React.Component {
     if(!this.state.box) return null
     const { image, name, description } = this.state.box
     const { price } = this.state
+    console.log(this.state)
 
     return (
       <section className="section">
