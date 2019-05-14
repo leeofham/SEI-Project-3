@@ -33,9 +33,9 @@ class Basket extends React.Component {
         <h1 className="title is-1">Your basket is empty</h1>
 
 
+      
 
-
-        <Link to={'/boxes'} className="button is-link is-outlined is-large">Continue Shopping</Link>
+        <Link to={'/premade'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
         <Link to={'/checkout'} className="button is-link is-outlined is-large">Check Out</Link>
       </section>

@@ -49,10 +49,13 @@ const Home = () => {
           </div>
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
-              <h2> Step Two: </h2>
-              <Link to={'/boxes'} className="button is-link is-outlined is-large">
+              <h2> Step Two: Choose a box  </h2>
+              <Link to={'/premade'} className="button is-link is-outlined is-large">
+                <h3> Choose a premade  </h3>
+              </Link>
 
-                <h3> Choose a premade box or make your own </h3>
+              <Link to={'/mycrates/new'} className="button is-link is-outlined is-large">
+                <h3> Make your own </h3>
               </Link>
             </div>
 
