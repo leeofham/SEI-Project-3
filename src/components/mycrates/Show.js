@@ -36,9 +36,9 @@ class Show extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{name}</h1>
+          <h2 className="titleh2 is-fullwidth-desktop">{name}</h2>
           {this.canModify() &&
-            <Link to={`/mycrates/${this.state.box._id}/edit`} className="button is-primary">Edit</Link>
+            <Link to={`/mycrates/${this.state.box._id}/edit`} className="buttonNew">Edit</Link>
           }
           <hr />
 
@@ -50,10 +50,10 @@ class Show extends React.Component {
             </div>
 
             <div className="column is-half-desktop is-full-tablet">
-              <p>{description}</p>
+              <p className="largerText">{description}</p>
               <hr />
-              {Auth.isAuthenticated() && <Link to="/basket" className="button">Add to your basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="button">Login</Link>}
+              {Auth.isAuthenticated() && <Link to="/basket" className="buttonNew">Add to your basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
             </div>
           </div>
         </div>

@@ -253,7 +253,7 @@ mongoose.connect(dbUri, (err, db) => {
             contents: [product[9], product[10], product[11]],
             createdBy: user,
             category: 'Lord of The Rings',
-            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Join the battle against the dark forces of Sauron. Order below and Add to your basket!'
           },{
             name: 'Premade',
             image: 'https://sta.uwi.edu/fss/dms/sites/default/files/dms/images/lord-of-the-rings_1.jpg',
@@ -264,7 +264,7 @@ mongoose.connect(dbUri, (err, db) => {
             contents: [product[12], product[13], product[14], product[15], product[16], product[17]],
             createdBy: user,
             category: 'Lord of The Rings',
-            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Join the battle against the dark forces of Sauron. Order below and Add to your basket!'
           },{
             name: 'Premade',
             image: 'https://sta.uwi.edu/fss/dms/sites/default/files/dms/images/lord-of-the-rings_1.jpg',
@@ -275,7 +275,7 @@ mongoose.connect(dbUri, (err, db) => {
             contents: [product[9], product[10], product[11], product[12], product[13], product[14], product[15], product[16], product[17]],
             createdBy: user,
             category: 'Lord of The Rings',
-            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Joint the battle against the dark forces of Sauron. Order below and Add to your basket!'
+            description: 'This box has the apparel to win the One Ring! Get authentic lord of the rings gear including items from the films and the books. Join the battle against the dark forces of Sauron. Order below and Add to your basket!'
           },{
             name: 'Premade',
             image: 'https://pbs.twimg.com/profile_images/418416924138024961/ArB9VMfa.png',

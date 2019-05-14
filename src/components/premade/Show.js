@@ -28,7 +28,7 @@ class Show extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{category} Premade Box</h1>
+          <h2 className="titleh2 is-fullwidth-desktop">{category} Premade Box</h2>
           <hr />
 
           <div className="columns is-multiline">
@@ -44,8 +44,8 @@ class Show extends React.Component {
               {Auth.isAuthenticated() && <Link to={{
                 pathname: '/basket',
                 state: this.state.premade
-              }} className="button is-dark">Add to your basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="button is-dark">Login</Link>}
+              }} className="buttonNew">Add to your basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
             </div>
           </div>
         </div>

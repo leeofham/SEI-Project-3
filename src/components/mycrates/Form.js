@@ -74,7 +74,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         {errors.image && <div className="help is-danger">{errors.image}</div>}
       </div>
 
-      <button className="button is-primary">Submit</button>
+      <button className="buttonNew">Submit</button>
     </form>
   )
 }
