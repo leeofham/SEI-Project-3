@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Card from '../mycrates/Card'
+import Card from '../mycrates/Card'
 
 class Basket extends React.Component {
 
@@ -32,8 +32,14 @@ class Basket extends React.Component {
       <section id="boxes" className="section">
         <h1 className="title is-1">Your basket is empty</h1>
 
+        <p>
+          {this.state.basket.map((basket, index) =>
+            <div id="basket" key={basket[index]._id}>
+              <Card {...basket} />
 
-
+            </div>
+          )}
+        </p>
 
         <Link to={'/boxes'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
@@ -44,16 +50,3 @@ class Basket extends React.Component {
 }
 
 export default Basket
-
-
-
-
-//
-// <p>
-//   {this.state.basket.map((basket, index) =>
-//     <div id="basket" key={basket[index]._id}>
-//       <Card {...basket} />
-//
-//     </div>
-//   )}
-// </p>

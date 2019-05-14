@@ -53,8 +53,8 @@ class Navbar extends React.Component {
 
             <div className="navbar-start">
               {/* Left-hand links */}
-              {Auth.isAuthenticated() && <Link to="/mycrates" className="navbar-item">My Crate</Link>}
-              <Link to="/premade" className="navbar-item">Premade</Link>
+              {Auth.isAuthenticated() && <Link to="/mycrates" className="navbar-item">Profile</Link>}
+              <Link to="/premade" className="navbar-item">View boxes</Link>
             </div>
 
             <div className="navbar-end">

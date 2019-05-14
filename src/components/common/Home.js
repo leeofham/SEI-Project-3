@@ -52,7 +52,7 @@ const Home = () => {
               <h2> Step Two: </h2>
               <Link to={'/boxes'} className="button is-link is-outlined is-large">
 
-                <h3> Choose a premade box or make your own </h3>
+                <h3> Choose a box </h3>
               </Link>
             </div>
 
