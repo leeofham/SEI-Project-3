@@ -12,18 +12,30 @@ class Show extends React.Component {
       premade: null,
       product: []
     }
-
+    this.setPrice = this.setPrice.bind(this)
   }
 
   componentDidMount() {
     axios.get(`/api/premade/${this.props.match.params.id}`)
       .then(res => this.setState({ premade: res.data}))
+      .then(this.setPrice)
+  }
+
+  setPrice(){
+    if(this.state.premade.total === 3){
+      this.setState({...this.state.premade,  price: 10})
+    } else if(this.state.premade.total === 6){
+      this.setState({price: 15})
+    } else {
+      this.setState({price: 25})
+    }
   }
 
   render() {
 
     if(!this.state.premade) return null
     const { image, category, description } = this.state.premade
+    const { price } = this.state
 
     return (
       <section className="section">
@@ -41,6 +53,7 @@ class Show extends React.Component {
             <div className="column is-half-desktop is-full-tablet">
               <p className="largerText">{description}</p>
               <hr />
+              <p>£{price}</p>
               {Auth.isAuthenticated() && <Link to="/ordered" className="button is-dark">Buy Now!</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="button is-dark">Login</Link>}
             </div>
