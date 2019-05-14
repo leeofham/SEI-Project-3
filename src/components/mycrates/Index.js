@@ -53,6 +53,8 @@ class Index extends React.Component {
             )
             }
           </Carousel>
+          <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
+          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
         </div>
       </section>
     )

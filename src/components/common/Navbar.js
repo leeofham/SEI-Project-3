@@ -53,8 +53,8 @@ class Navbar extends React.Component {
 
             <div className="navbar-start">
               {/* Left-hand links */}
-              {Auth.isAuthenticated() && <Link to="/mycrates" className="navbar-item">My Crate</Link>}
-              <Link to="/premade" className="navbar-item">Premade</Link>
+              {Auth.isAuthenticated() && <Link to="/mycrates" className="navbar-item">Profile</Link>}
+              <Link to="/premade" className="navbar-item">View boxes</Link>
             </div>
 
             <div className="navbar-end">
@@ -63,7 +63,9 @@ class Navbar extends React.Component {
               {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
               {Auth.isAuthenticated() && <a className="navbar-item" onClick={this.logout}>Logout</a>}
               <figure id="cart" className="image">
-                <img src="../images/Basket.png" />
+                <Link to={'/basket'} className="button is-link is-outlined is-large">
+                  <img src="../images/Basket.png" />
+                </Link>
               </figure>
             </div>
           </div>

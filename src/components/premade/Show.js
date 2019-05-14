@@ -54,7 +54,10 @@ class Show extends React.Component {
               <p className="largerText">{description}</p>
               <hr />
               <p>£{price}</p>
-              {Auth.isAuthenticated() && <Link to="/ordered" className="button is-dark">Buy Now!</Link>}
+              {Auth.isAuthenticated() && <Link to={{
+                pathname: '/basket',
+                state: this.state.premade
+              }} className="button is-dark">Add to your basket</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="button is-dark">Login</Link>}
             </div>
           </div>

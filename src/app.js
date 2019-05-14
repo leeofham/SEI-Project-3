@@ -20,6 +20,7 @@ import MyCratesShow from './components/mycrates/Show'
 
 import BoxesOrdered from './components/common/OrderedBox'
 import CheckoutForm from './components/common/CheckoutForm'
+import Basket from './components/common/Basket'
 
 import 'bulma'
 import './style.scss'
@@ -31,6 +32,7 @@ class App extends React.Component{
         <div>
           <Navbar />
           <Switch>
+            <Route path="/basket" component={Basket} />
             <Route path="/mycrates/new" component={MyCratesNew} />
             <Route path="/mycrates/:id/edit" component={MyCratesEdit} />
             <Route path="/mycrates/:id" component={MyCratesShow} />
