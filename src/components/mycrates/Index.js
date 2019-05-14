@@ -30,7 +30,6 @@ class Index extends React.Component {
     return (
       <section className="section index">
         <h2 className="title is-fullwidth-desktop">My Crates</h2>
-        <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
         <div className="container">
           <Carousel
             showThumbs={false}
@@ -50,11 +49,12 @@ class Index extends React.Component {
             )
             }
           </Carousel>
+          <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
+          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
         </div>
       </section>
     )
   }
 }
 
-// {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
 export default Index
