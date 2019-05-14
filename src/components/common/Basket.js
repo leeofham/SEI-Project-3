@@ -30,19 +30,21 @@ class Basket extends React.Component {
 
   render() {
     console.log(this.state.basket, 'this.state.basket')
-    if(!this.state.basket) return null
+    if(!this.state.basket){
+      <h1 className="title is-1">Your basket is empty</h1>
+      return null
+    }
     // const user = Auth.getPayload().sub
 
     return (
       <section id="boxes" className="section">
-        <h1 className="title is-1">Your basket is empty</h1>
+
+        {this.state.basket} <h1 className="title is-1">Items in your basket </h1>
 
         <div>
-
           {this.state.basket.map((product, index) =>
             <div className="basket" key={index}>
               <Card {...product} />
-
             </div>
           )}
         </div>
