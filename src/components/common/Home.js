@@ -17,15 +17,12 @@ const Home = () => {
     <div className="div">
       <section className="hero is-fullheight-with-navbar" style={heroBG}>
         <div className="hero-body">
-          <div>
-
-            <div className="container has-text-centered ">
-              <h1> Welcome to Nerd Crate! </h1>
-              <p> A place to find your favourite merchandise </p>
-              <Hash smooth to="#how-it-works">
-                <button className="button">How it works...</button>
-              </Hash>
-            </div>
+          <div id="align-hero" className="container has-text-centered ">
+            <h1> Welcome to Nerd Crate! </h1>
+            <p> A place to find your favourite merchandise </p>
+            <Hash smooth to="#how-it-works">
+              <button className="button">How it works...</button>
+            </Hash>
           </div>
         </div>
       </section>

@@ -62,6 +62,9 @@ class Navbar extends React.Component {
               {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
               {Auth.isAuthenticated() && <a className="navbar-item" onClick={this.logout}>Logout</a>}
+              <figure id="cart" className="image">
+                <img src="../images/Basket.png" />
+              </figure>
             </div>
           </div>
         </div>
