@@ -61,7 +61,7 @@ class Show extends React.Component {
           <div className="columns is-multiline">
             <div className="column is-half-desktop is-full-tablet">
               <figure className="image is-128x128">
-                <img src={image} alt={name} />
+                <img src={image ? image:'../../images/default.jpg'} alt={name} />
               </figure>
             </div>
 
