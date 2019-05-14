@@ -49,7 +49,7 @@ class Basket extends React.Component {
           )}
         </div>
 
-        <Link to={'/boxes'} className="button is-link is-outlined is-large">Continue Shopping</Link>
+        <Link to={'/premade'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
         <Link to={'/checkout'} className="button is-link is-outlined is-large">Check Out</Link>
       </section>

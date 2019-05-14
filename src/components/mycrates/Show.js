@@ -12,6 +12,9 @@ class Show extends React.Component {
       box: null,
       product: []
     }
+
+    this.setPrice = this.setPrice.bind(this)
+
   }
 
   canModify(){
@@ -21,6 +24,7 @@ class Show extends React.Component {
   componentDidMount() {
     axios.get(`/api/boxes/${this.props.match.params.id}`)
       .then(res => this.setState({ box: res.data}))
+      .then(this.setPrice)
   }
 
   handleSubmit(e) {
@@ -29,31 +33,44 @@ class Show extends React.Component {
 
   }
 
+  setPrice(){
+    if(this.state.box.total === 3){
+      this.setState({...this.state.box,  price: 10})
+    } else if(this.state.box.total === 6){
+      this.setState({price: 15})
+    } else {
+      this.setState({price: 25})
+    }
+  }
+
   render() {
     if(!this.state.box) return null
     const { image, name, description } = this.state.box
+    const { price } = this.state
+    console.log(this.state)
 
     return (
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{name}</h1>
+          <h2 className="titleh2 is-fullwidth-desktop">{name}</h2>
           {this.canModify() &&
-            <Link to={`/mycrates/${this.state.box._id}/edit`} className="button is-primary">Edit</Link>
+            <Link to={`/mycrates/${this.state.box._id}/edit`} className="buttonNew">Edit</Link>
           }
           <hr />
 
           <div className="columns is-multiline">
             <div className="column is-half-desktop is-full-tablet">
               <figure className="image is-128x128">
-                <img src={image} alt={name} />
+                <img src={image ? image:'../../images/default.jpg'} alt={name} />
               </figure>
             </div>
 
             <div className="column is-half-desktop is-full-tablet">
-              <p>{description}</p>
+              <p className="largerText">{description}</p>
               <hr />
-              {Auth.isAuthenticated() && <Link to="/basket" className="button">Add to your basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="button">Login</Link>}
+              <p>£{price}</p>
+              {Auth.isAuthenticated() && <Link to="/basket" className="buttonNew">Add to your basket</Link>}
+              {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
             </div>
           </div>
         </div>

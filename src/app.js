@@ -19,8 +19,8 @@ import MyCratesEdit from './components/mycrates/Edit'
 import MyCratesShow from './components/mycrates/Show'
 
 import BoxesOrdered from './components/common/OrderedBox'
+import CheckoutForm from './components/common/CheckoutForm'
 import Basket from './components/common/Basket'
-
 
 import 'bulma'
 import './style.scss'
@@ -37,6 +37,7 @@ class App extends React.Component{
             <Route path="/mycrates/:id/edit" component={MyCratesEdit} />
             <Route path="/mycrates/:id" component={MyCratesShow} />
             <Route path="/premade/:id" component={PremadeShow} />
+            <Route path="/checkout" component={CheckoutForm} />
             <Route path="/mycrates" component={MyCratesIndex} />
             <Route path="/ordered" component={BoxesOrdered} />
             <Route path="/premade" component={PremadeIndex} />

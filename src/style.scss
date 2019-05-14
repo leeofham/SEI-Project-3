@@ -124,5 +124,42 @@ h2 {
 }
 
 #cart {
-  width: 50px;
+  width: 75px;
+}
+
+.buttonNew {
+  font-family: 'Bangers', cursive;
+  font-size: 25px;
+  color: #eb8019;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+ }
+
+.largerText {
+  font-size: 25px;
+  background-color: #558ABB;
+  box-shadow: 20px 15px 6px rgba(0,0,0,.5);
+  padding: 5px;
+  color: white;
+}
+
+body {
+  background: $background;
+  height: 100vh;
+  overflow: auto;
+}
+
+.titleh2 {
+  font-family: 'Bangers', cursive;
+  font-size: 100px;
+  letter-spacing: 4px;
+  text-shadow: 5px 4px #346da3;
+  color: black;
+}
+
+.label {
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    letter-spacing: 4px;
 }
