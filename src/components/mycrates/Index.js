@@ -21,6 +21,7 @@ class Index extends React.Component {
   componentDidMount() {
     axios('/api/boxes')
       .then(res => this.setState({ mycrates: res.data }))
+
   }
 
   render() {
@@ -30,6 +31,8 @@ class Index extends React.Component {
     return (
       <section className="section index">
         <h2 className="title is-fullwidth-desktop">My Crates</h2>
+        <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
+        {<Link to='/mycrates/new'><button className="button"> Make a new crate!</button></Link>}
         <div className="container">
           <Carousel
             showThumbs={false}
@@ -41,6 +44,7 @@ class Index extends React.Component {
           >
             {this.state.mycrates.map(mycrate =>
               (user === mycrate.createdBy) &&
+
               <div id="carousel" key={mycrate._id}>
                 <Link to={`/mycrates/${mycrate._id}`}>
                   <Card {...mycrate} />
