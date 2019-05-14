@@ -56,5 +56,5 @@ class Index extends React.Component {
   }
 }
 
-export default Index
 // {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
+export default Index
