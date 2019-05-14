@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
-import Card from '../mycrates/Card'
-import Auth from '../../lib/Auth'
+// import Card from '../mycrates/Card'
 
 class Basket extends React.Component {
 
@@ -15,11 +13,6 @@ class Basket extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   axios.get(`/api/mycrates/${this.props.match.params.id}`)
-  //     .then(res => this.setState({ basket: res.data }))
-  // }
-
 
   componentDidMount() {
     const { newItem } = this.state
@@ -29,9 +22,6 @@ class Basket extends React.Component {
     }
     this.setState({ basket: [...basket, newItem ]}, () => localStorage.setItem('Basket', JSON.stringify(this.state.basket)))
   }
-
-
-
 
   render() {
     console.log(this.state.basket, 'this.state.basket')
@@ -45,9 +35,6 @@ class Basket extends React.Component {
 
 
 
-
-
-
         <Link to={'/boxes'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
         <Link to={'/checkout'} className="button is-link is-outlined is-large">Check Out</Link>
@@ -57,3 +44,16 @@ class Basket extends React.Component {
 }
 
 export default Basket
+
+
+
+
+//
+// <p>
+//   {this.state.basket.map((basket, index) =>
+//     <div id="basket" key={basket[index]._id}>
+//       <Card {...basket} />
+//
+//     </div>
+//   )}
+// </p>

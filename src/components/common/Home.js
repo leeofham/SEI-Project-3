@@ -1,6 +1,7 @@
 import React from 'react'
 import { HashLink as Hash } from 'react-router-hash-link'
 import { Link } from 'react-router-dom'
+import Auth from '../../lib/Auth'
 
 // <Link to={'/premade'} className="button is-link is-outlined is-large">Premade Box</Link>
 
@@ -36,15 +37,20 @@ const Home = () => {
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
               <h2> Step One: </h2>
-              <Link to={'/login'} className="button is-link is-outlined is-large">
+
+
+              {Auth.isAuthenticated() && <Link to={'/mycrates'} className="button is-link is-outlined is-large">
                 <h3> Create your account </h3>
-              </Link>
+              </Link>}
+              {!Auth.isAuthenticated() && <Link to={'/login'} className="button is-link is-outlined is-large">
+                <h3> Create your account </h3>
+              </Link>}
             </div>
           </div>
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
               <h2> Step Two: </h2>
-              <Link to={'/premade'} className="button is-link is-outlined is-large">
+              <Link to={'/boxes'} className="button is-link is-outlined is-large">
 
                 <h3> Choose a premade box or make your own </h3>
               </Link>
@@ -55,7 +61,7 @@ const Home = () => {
             <div className="column-style">
               <h2> Step Three: </h2>
               <Link to={'/basket'} className="button is-link is-outlined is-large">
-                <h3> Add to your basket </h3>
+                <h3> Add to your basket and pay </h3>
               </Link>
             </div>
 
