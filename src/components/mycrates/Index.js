@@ -34,6 +34,7 @@ class Index extends React.Component {
         <div className="container">
           <Carousel
             showThumbs={false}
+            showStatus={false}
             showArrows={true}
             autoPlay={true}
             interval={2000}

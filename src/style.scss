@@ -2,6 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Bangers);
 $background: #86B3D1;
 
+div.hero.is-fullheight-with-navbar.hero-body,div{
+  margin: 0, auto;
+}
+
 .hero {
   height: 100vh;
   background: #86B3D1;
@@ -11,12 +15,15 @@ $background: #86B3D1;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
   color: white;
 
+  h1{
+    margin: 0 auto;
+  }
   p {
+    margin: 0 auto;
     font-size: 35px;
-    color: black;
+    color: white;
   }
 }
 
