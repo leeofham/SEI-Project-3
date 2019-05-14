@@ -16,6 +16,8 @@ class Index extends React.Component {
     this.state = {
       mycrates: null
     }
+
+    this.filterArray = this.filterArray.bind(this)
   }
 
   componentDidMount() {
@@ -23,14 +25,29 @@ class Index extends React.Component {
       .then(res => this.setState({ mycrates: res.data }))
   }
 
+  filterArray(){
+    console.log('i am running')
+    const user = Auth.getPayload().sub
+    console.log(user, 'this is the user')
+    console.log(typeof this.state.mycrates)
+    const filteredCrates = this.state.mycrates.filter(mycrate => {
+      if(mycrate.createdBy === user) {
+        return mycrate.createdBy.includes(user)
+      }
+    })
+    return filteredCrates
+  }
+
   render() {
     if(!this.state.mycrates) return null
-    const user = Auth.getPayload().sub
+    console.log(this.state, 'i am state')
 
     return (
       <section className="section index">
         <h2 className="titleh2 is-fullwidth-desktop">My Crates</h2>
         <div className="container">
+          <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
+          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
           <Carousel
             showThumbs={false}
             showStatus={false}
@@ -39,15 +56,13 @@ class Index extends React.Component {
             interval={2000}
             stopOnHover={true}
           >
-            {this.state.mycrates.map(mycrate =>
-              (user === mycrate.createdBy) &&
+            {this.filterArray().map(mycrate =>
               <div id="carousel" key={mycrate._id}>
                 <Link to={`/mycrates/${mycrate._id}`}>
                   <Card {...mycrate} />
                 </Link>
               </div>
-            )
-            }
+            )}
           </Carousel>
           <h3 className="title is-full-width-desktop">If you have not made a crate</h3>
           <Link to="/mycrates/new" className="buttonNew">Make another crate!</Link>
@@ -58,3 +73,11 @@ class Index extends React.Component {
 }
 
 export default Index
+
+// {this.state.mycrates.map(mycrate =>
+//   <div id="carousel" key={mycrate._id}>
+//     <Link to={`/mycrates/${mycrate._id}`}>
+//       <Card {...mycrate} />
+//     </Link>
+//   </div>
+// )}

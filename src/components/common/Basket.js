@@ -32,16 +32,16 @@ class Basket extends React.Component {
       <section id="boxes" className="section">
         <h1 className="title is-1">Your basket is empty</h1>
 
-        <p>
+        <div>
           {this.state.basket.map((basket, index) =>
             <div id="basket" key={basket[index]._id}>
               <Card {...basket} />
-
             </div>
           )}
-        </p>
+        </div>
 
-        <Link to={'/boxes'} className="button is-link is-outlined is-large">Continue Shopping</Link>
+
+        <Link to={'/premade'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
         <Link to={'/checkout'} className="button is-link is-outlined is-large">Check Out</Link>
       </section>

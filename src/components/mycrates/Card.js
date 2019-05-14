@@ -6,7 +6,7 @@ const Card = ({ name, image, category, total }) => {
     <div className="card is-shady">
       <div className="card-image">
         <figure className="image is-128x128">
-          <img src={image} alt={name} />
+          <img src={image ? image:'../../images/default.jpg'} alt={name} />
         </figure>
       </div>
       <div className="card-header">
