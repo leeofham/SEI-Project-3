@@ -13,19 +13,28 @@ $background: #86B3D1;
   background-attachment: fixed;
   position: relative;
   color: white;
+  overflow-x: hidden;
 
-  p {
-    font-size: 35px;
-    color: black;
+  p, h2 {
+    font-size: 30px;
+    color: white;
+  }
+
+  button {
+    font-family: 'Bangers', cursive;
+    font-size: 25px;
+    color: #eb8019
   }
 }
 
-html{
+html {
   height: 100vh;
   background-color: #86B3D1;
 }
 nav.navbar.is-dark{
-  background-color: #222222;
+  background-color: black;
+  font-family: 'Bangers', cursive;
+  font-size: 25px;
 }
 
 a.button.button.is-dark{
@@ -78,19 +87,22 @@ hr{
 box-shadow: 0 20px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 }
 
-.column-style {
-  border: 2px dotted white;
-  height: 21vh;
-  padding-top: 35px;
-}
-
 h2, h3 {
   font-size: 20px;
-  color: white;
+  // color: white;
 }
 
 h2 {
   text-decoration: underline;
+}
+
+.column-style {
+  border: 2px dotted white;
+  border-radius: 30px;
+  height: 21vh;
+  padding-top: 35px;
+  background-color: #eb8019;
+  color: black;
 }
 
 #steps {

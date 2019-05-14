@@ -1,5 +1,10 @@
 import React from 'react'
 import { HashLink as Hash } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
+
+// <Link to={'/premade'} className="button is-link is-outlined is-large">Premade Box</Link>
+
+// <Link to={'/mystery'}  className="button is-link is-outlined is-large">Mystery Box</Link>
 
 const Home = () => {
   const heroBG = {
@@ -24,7 +29,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="how-it-works" className="hero is-fullheight-with-navbar">
+      <section id="how-it-works" className="hero is-fullheight-with-navbar" style={heroBG}>
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1> How it works... </h1>
@@ -34,24 +39,27 @@ const Home = () => {
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
               <h2> Step One: </h2>
-              <h3> Create your account </h3>
+              <Link to={'/login'} className="button is-link is-outlined is-large">
+                <h3> Create your account </h3>
+              </Link>
             </div>
           </div>
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
-
-
               <h2> Step Two: </h2>
-              <h3> Choose a premade box or make your own </h3>
+              <Link to={'/premade'} className="button is-link is-outlined is-large">
+
+                <h3> Choose a premade box or make your own </h3>
+              </Link>
             </div>
 
           </div>
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
-
-
               <h2> Step Three: </h2>
-              <h3> Add to your basket </h3>
+              <Link to={'/basket'} className="button is-link is-outlined is-large">
+                <h3> Add to your basket </h3>
+              </Link>
             </div>
 
           </div>
