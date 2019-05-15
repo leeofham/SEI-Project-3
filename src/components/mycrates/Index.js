@@ -4,26 +4,32 @@ import { Link } from 'react-router-dom'
 import Auth from '../../lib/Auth'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
-
+import Promise from 'bluebird'
 
 import Card from './Card'
 const user = Auth.getPayload().sub
 
 class Index extends React.Component {
-
   constructor() {
     super()
-
     this.state = {
-      mycrates: null
+      mycrates: null,
+      data: {},
+      errors: {}
     }
-
     this.filterArray = this.filterArray.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+
   componentDidMount() {
-    axios('/api/boxes')
-      .then(res => this.setState({ mycrates: res.data }))
+    Promise.props({
+      mycrates: axios.get('/api/boxes').then(res => res.data),
+      user: axios.get(`/api/users/${user}`).then(res => res.data)
+    })
+      .then(res => this.setState({ mycrates: res.mycrates, data: res.user }))
+      .catch(err => console.error(err))
   }
 
   saveDetails(){
@@ -43,6 +49,22 @@ class Index extends React.Component {
     })
     return filteredCrates
   }
+
+  handleChange(e) {
+    const data = { ...this.state.data, [e.target.name]: e.target.value }
+    this.setState({ data })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    const token = Auth.getToken()
+    axios.put(`/api/users/${this.state.data._id}`, this.state.data, {
+      headers: { 'Authorization': `Bearer ${token}` }
+    })
+      .then(() => this.props.history.push('/premade'))
+      .catch(err => this.setState({ errors: err.response.data.errors }))
+  }
+
 
   render() {
     if(!this.state.mycrates) return null
@@ -76,24 +98,57 @@ class Index extends React.Component {
               </div>
             )}
           </Carousel>
+
           <Link to="/mycrates/new" className="buttonNew">Make another crate!</Link>
+
           <h2 className="titleh2 is-fullwidth-desktop">Manage your account</h2>
-          <p>Username </p>
-          <input className='input' value={user}></input>
-          <p>Full Name</p>
-          <input className='input' placeholder='1234'></input>
-          <p>Last Name</p>
-          <input className='input' placeholder='1234'></input>
-          <p>Address</p>
-          <input className='input' placeholder='1234'></input>
-          <p>Email</p>
-          <input className='input' placeholder='1234'></input>
+
+          <form onSubmit={this.handleSubmit}>
+            <div className="field">
+              <label className="label">Username</label>
+              <div className="control">
+                <input className='input' name="username" placeholder="e.g. John" value={this.state.data.username} onChange={this.handleChange}></input>
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">First Name</label>
+              <div className="control">
+                <input className='input' name="firstName" placeholder="e.g. Mr Smith" value={this.state.data.firstName} onChange={this.handleChange}></input>
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Last Name</label>
+              <div className="control">
+                <input className='input' name="lastName" placeholder="e.g. Mr Smith" value={this.state.data.lastName} onChange={this.handleChange}></input>
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Address</label>
+              <div className="control">
+                <input className='input' name="Address" placeholder="1 Nerd Road" value={this.state.data.address} onChange={this.handleChange}></input>
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control">
+                <input className='input' name ="email" placeholder="1 Nerd Road" value={this.state.data.email} onChange={this.handleChange}></input>
+              </div>
+            </div>
 
 
-          <button className="button" onClick={this.changeDetails}>Save your details!</button>
+            <button className="button" onClick={this.changeDetails}>Save your details!</button>
 
+
+          </form>
         </div>
+
       </section>
+
+
     )
   }
 }
