@@ -6,7 +6,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
       <div className="field">
         <label className="label">Name your dream crate</label>
         <div className="control">
-          <input
+          <input id="form-Input"
             className="input"
             name="name"
             placeholder="eg: Limited edition Lord of The Rings!"
@@ -16,7 +16,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         </div>
         {errors.name && <div className="help is-danger">{errors.name}</div>}
       </div>
-      <div className="field">
+      <div className="field" id="form-Input">
         <label className="label">Size of box</label>
         <div className="control">
           <div className="select is-fullwidth">
@@ -38,6 +38,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         <label className="label">Genre or Category</label>
         <div className="control">
           <input
+            id="form-Input"
             className="input"
             name="category"
             placeholder="eg: Lord of The Ring"
@@ -45,12 +46,13 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
             value={data.category || ''}
           />
         </div>
-        {errors.image && <div className="help is-danger">{errors.image}</div>}
+        {errors.category && <div className="help is-danger">{errors.category}</div>}
       </div>
       <div className="field">
         <label className="label">Description</label>
         <div className="control">
           <input
+            id="form-Input"
             className="textarea"
             name="description"
             placeholder="This is my Lord of The Rings box containing limited edition Lord of The Rings merch!"
@@ -58,7 +60,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
             value={data.description || ''}
           />
         </div>
-        {errors.image && <div className="help is-danger">{errors.image}</div>}
+        {errors.description && <div className="help is-danger">{errors.description}</div>}
       </div>
 
       <button className="buttonNew">Submit</button>

@@ -23,7 +23,6 @@ class Basket extends React.Component {
     } else {
       this.setState({ basket: [...basket, newItem ]}, () => Cart.setContents(this.state.basket))
     }
-
   }
 
   getTotal() {
