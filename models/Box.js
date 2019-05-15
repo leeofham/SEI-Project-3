@@ -34,7 +34,20 @@ const boxSchema = new mongoose.Schema({
     ref: 'User'
   },
   contents: [{ type: mongoose.Schema.ObjectId, ref: 'Product' }]
+}, {
+  toJSON: {
+    virtuals: true
+  }
 })
+
+boxSchema.virtual('price')
+  .get(function() {
+    switch(this.contents.length) {
+      case 3: return 10
+      case 6: return 15
+      default: return 25
+    }
+  })
 
 boxSchema.pre('save', function productToBox(next){
 
