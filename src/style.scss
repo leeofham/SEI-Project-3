@@ -203,6 +203,14 @@ body {
   color: black;
 }
 
+.titleh3 {
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  letter-spacing: 4px;
+  text-shadow: 5px 4px #346da3;
+  color: white;
+}
+
 .label {
     font-family: 'Bangers', cursive;
     font-size: 20px;
@@ -222,4 +230,15 @@ body {
   margin-left: 25%;
   margin-right: 25%;
   width: 50%;
+}
+
+.section {
+  padding: 0px;
+}
+
+.hero1 {
+  background-color: black;
+  color: white;
+  margin-bottom: 35px;
+
 }
