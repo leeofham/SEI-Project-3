@@ -7,6 +7,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 
 import Card from './Card'
+const user = Auth.getPayload().sub
 
 class Index extends React.Component {
 
@@ -23,6 +24,10 @@ class Index extends React.Component {
   componentDidMount() {
     axios('/api/boxes')
       .then(res => this.setState({ mycrates: res.data }))
+  }
+
+  saveDetails(){
+
   }
 
   filterArray(){
@@ -61,7 +66,7 @@ class Index extends React.Component {
             autoPlay={true}
             interval={2000}
             stopOnHover={true}
-            width={400}
+            width={'400px'}
           >
             {this.filterArray().map(mycrate =>
               <div id="carousel" key={mycrate._id}>
@@ -73,13 +78,19 @@ class Index extends React.Component {
           </Carousel>
           <Link to="/mycrates/new" className="buttonNew">Make another crate!</Link>
           <h2 className="titleh2 is-fullwidth-desktop">Manage your account</h2>
-          <p>Username: </p>
-          <p>Full Name:</p>
-          <p>Last Name:</p>
-          <p>Address:</p>
-          <p>Email:</p>
+          <p>Username </p>
+          <input className='input' value={user}></input>
+          <p>Full Name</p>
+          <input className='input' placeholder='1234'></input>
+          <p>Last Name</p>
+          <input className='input' placeholder='1234'></input>
+          <p>Address</p>
+          <input className='input' placeholder='1234'></input>
+          <p>Email</p>
+          <input className='input' placeholder='1234'></input>
 
-          <Link to="/mycrates/editprofile" className="buttonNew">Edit your details!</Link>
+
+          <button className="button" onClick={this.changeDetails}>Save your details!</button>
 
         </div>
       </section>
