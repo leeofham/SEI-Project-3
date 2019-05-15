@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ image, category, total }) => {
+const Card = ({ image, category, total, numberOfLegendary, numberOfRare, numberOfCommon, price }) => {
   return (
     <div className="card">
       <div className="card-header">
@@ -16,7 +16,12 @@ const Card = ({ image, category, total }) => {
       </div>
       <div className="card-content">
         <div className="content">
-          <p>Premade {category} box with {total} items</p>
+          <p>This box contains {total} items:</p>
+          <ul><li>{numberOfLegendary} Legendary Items,</li>
+            <li>{numberOfRare} Rare items,</li>
+            <li>{numberOfCommon} Common Items</li>
+          </ul>
+          <p> Item price: £{price} </p>
         </div>
       </div>
     </div>
