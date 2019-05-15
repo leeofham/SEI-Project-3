@@ -13,7 +13,6 @@ class Basket extends React.Component {
     }
   }
 
-
   componentDidMount() {
     const { newItem } = this.state
     let basket = []
@@ -29,6 +28,7 @@ class Basket extends React.Component {
   }
 
   render() {
+    console.log(this.props.data, 'this is data')
     console.log(this.state.basket, 'this.state.basket')
     if(!this.state.basket){
       <h1 className="title is-1">Your basket is empty</h1>
@@ -39,9 +39,9 @@ class Basket extends React.Component {
     return (
       <section id="boxes" className="section">
 
-        {this.state.basket} <h1 className="title is-1">Items in your basket </h1>
+        {this.state.basket.length === 0 && <h1 className="title is-1">Items in your basket </h1>}
 
-        <div>
+        <div className="basket">
           {this.state.basket.map((product, index) =>
             <div className="basket" key={index}>
               <Card {...product} />

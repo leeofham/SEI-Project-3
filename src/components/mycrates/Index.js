@@ -30,6 +30,7 @@ class Index extends React.Component {
     const user = Auth.getPayload().sub
     console.log(user, 'this is the user')
     console.log(typeof this.state.mycrates)
+
     const filteredCrates = this.state.mycrates.filter(mycrate => {
       if(mycrate.createdBy === user) {
         return mycrate.createdBy.includes(user)
@@ -41,20 +42,26 @@ class Index extends React.Component {
   render() {
     if(!this.state.mycrates) return null
     console.log(this.state, 'i am state')
+    console.log(this.state.user)
 
     return (
       <section className="section index">
-        <h2 className="titleh2 is-fullwidth-desktop">My Crates</h2>
+
+
+        <h2 className="titleh2 is-fullwidth-desktop">Your personally curated crates</h2>
         <div className="container">
-          <h3 className="title is-fullwidth-desktop">If you have not made a crate</h3>
-          {<Link to='/mycrates/new'><button className="button"> Make another crate!</button></Link>}
+
+          <p>  When you make the crate of your dreams you will see them all here! </p>
+
           <Carousel
             showThumbs={false}
             showStatus={false}
             showArrows={true}
+            infiniteLoop={true}
             autoPlay={true}
             interval={2000}
             stopOnHover={true}
+            width={400}
           >
             {this.filterArray().map(mycrate =>
               <div id="carousel" key={mycrate._id}>
@@ -64,8 +71,16 @@ class Index extends React.Component {
               </div>
             )}
           </Carousel>
-          <h3 className="title is-full-width-desktop">If you have not made a crate</h3>
           <Link to="/mycrates/new" className="buttonNew">Make another crate!</Link>
+          <h2 className="titleh2 is-fullwidth-desktop">Manage your account</h2>
+          <p>Username: </p>
+          <p>Full Name:</p>
+          <p>Last Name:</p>
+          <p>Address:</p>
+          <p>Email:</p>
+
+          <Link to="/mycrates/editprofile" className="buttonNew">Edit your details!</Link>
+
         </div>
       </section>
     )
@@ -73,6 +88,7 @@ class Index extends React.Component {
 }
 
 export default Index
+// <h3 className="title is-full-width-desktop">If you have not made a crate</h3>
 
 // {this.state.mycrates.map(mycrate =>
 //   <div id="carousel" key={mycrate._id}>
