@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel'
 import Promise from 'bluebird'
 
 import Card from './Card'
-const user = Auth.getPayload().sub
+// const user = Auth.getPayload().sub
 
 class Index extends React.Component {
   constructor() {
@@ -26,7 +26,7 @@ class Index extends React.Component {
   componentDidMount() {
     Promise.props({
       mycrates: axios.get('/api/boxes').then(res => res.data),
-      user: axios.get(`/api/users/${user}`).then(res => res.data)
+      user: axios.get(`/api/users/${Auth.getPayload().sub}`).then(res => res.data)
     })
       .then(res => this.setState({ mycrates: res.mycrates, data: res.user }))
       .catch(err => console.error(err))
@@ -37,17 +37,7 @@ class Index extends React.Component {
   }
 
   filterArray(){
-    console.log('i am running')
-    const user = Auth.getPayload().sub
-    console.log(user, 'this is the user')
-    console.log(typeof this.state.mycrates)
-
-    const filteredCrates = this.state.mycrates.filter(mycrate => {
-      if(mycrate.createdBy === user) {
-        return mycrate.createdBy.includes(user)
-      }
-    })
-    return filteredCrates
+    return this.state.mycrates.filter(mycrate => mycrate.createdBy === Auth.getPayload().sub)
   }
 
   handleChange(e) {

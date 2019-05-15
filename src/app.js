@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom'
 
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
+
+import FlashMessages from './components/common/FlashMessages'
+
+
 import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
 
@@ -31,6 +35,7 @@ class App extends React.Component{
       <Router>
         <div>
           <Navbar />
+          <FlashMessages />
           <Switch>
             <Route path="/basket" component={Basket} />
             <Route path="/mycrates/new" component={MyCratesNew} />
