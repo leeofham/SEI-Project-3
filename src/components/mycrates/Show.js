@@ -34,13 +34,12 @@ class Show extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h2 className="titleh2 is-fullwidth-desktop">{brandName}</h2>
-
+          <h2 className="titleh2 is-fullwidth-desktop">{brandName} My Crates Box</h2>
           <hr />
 
           <div className="columns is-multiline">
             <div className="column is-half-desktop is-full-tablet">
-              <figure className="image is-128x128">
+              <figure className="image is-square">
                 <img src={image ? image:'../../images/default.jpg'} alt={name} />
               </figure>
             </div>
@@ -74,6 +73,5 @@ class Show extends React.Component {
     )
   }
 }
-
 
 export default Show
