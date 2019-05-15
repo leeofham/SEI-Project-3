@@ -18,7 +18,7 @@ const Card = ({ name, image, category, total, price }) => {
       <div className="card-content">
         <div className="content">
           <p>Your {name} box with {total} items </p>
-          <p> Box cost: £{price} </p>
+          <p> Item price: £{price} </p>
         </div>
       </div>
     </div>
