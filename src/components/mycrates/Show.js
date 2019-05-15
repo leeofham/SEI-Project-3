@@ -9,42 +9,33 @@ class Show extends React.Component {
     super(props)
 
     this.state = {
-      box: null,
+      mycrates: null,
       product: []
     }
-
   }
 
-  canModify(){
-    return Auth.isAuthenticated() && Auth.getPayload().sub === this.state.box.createdBy
-  }
 
   componentDidMount() {
     axios.get(`/api/boxes/${this.props.match.params.id}`)
-      .then(res => this.setState({ box: res.data}))
+      .then(res => this.setState({ mycrates: res.data}))
       .then(this.setPrice)
   }
 
-  handleSubmit(e) {
-    e.preventDefault()
-
-
-  }
+  // canModify(){
+  //   return Auth.isAuthenticated() && Auth.getPayload().sub === this.state.box.createdBy
+  // }
 
 
   render() {
-    if(!this.state.box) return null
-    const { image, name, description } = this.state.box
-    // const { price } = this.state
-    console.log(this.state)
+    if(!this.state.mycrates) return null
+    const { image, brandName, description } =
+    this.state.mycrates
 
     return (
       <section className="section">
         <div className="container">
-          <h2 className="titleh2 is-fullwidth-desktop">{name}</h2>
-          {this.canModify() &&
-            <Link to={`/mycrates/${this.state.box._id}/edit`} className="buttonNew">Edit</Link>
-          }
+          <h2 className="titleh2 is-fullwidth-desktop">{brandName}</h2>
+
           <hr />
 
           <div className="columns is-multiline">
@@ -57,7 +48,10 @@ class Show extends React.Component {
             <div className="column is-half-desktop is-full-tablet">
               <p className="largerText">{description}</p>
               <hr />
-              {Auth.isAuthenticated() && <Link to="/basket" className="buttonNew">Add to your basket</Link>}
+              {Auth.isAuthenticated() && <Link to={{
+                pathname: '/basket',
+                state: this.state.mycrates
+              }} className="buttonNew">Add to your basket</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
             </div>
           </div>
@@ -69,19 +63,3 @@ class Show extends React.Component {
 
 
 export default Show
-
-
-// <p>£{price}</p>
-
-// this.setPrice = this.setPrice.bind(this)
-
-
-// setPrice(){
-//   if(this.state.box.total === 3){
-//     this.setState({...this.state.box,  price: 10})
-//   } else if(this.state.box.total === 6){
-//     this.setState({price: 15})
-//   } else {
-//     this.setState({price: 25})
-//   }
-// }
