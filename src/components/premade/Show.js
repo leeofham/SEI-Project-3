@@ -24,7 +24,7 @@ class Show extends React.Component {
   render() {
 
     if(!this.state.premade) return null
-    const { image, brandName, description } = this.state.premade
+    const { image, brandName, description, numberOfLegendary, numberOfCommon, numberOfRare, total, price } = this.state.premade
 
     return (
       <section className="section">
@@ -40,8 +40,22 @@ class Show extends React.Component {
             </div>
 
             <div className="column is-half-desktop is-full-tablet">
-              <p className="largerText">{description}</p>
+              <div className="largerText">
+                <p>{description} </p>
+                <br/>
+                <p>This box contains {total} items:</p>
+                <ul><li>{numberOfLegendary} Legendary Items,</li>
+                  <li>{numberOfRare} Rare items,</li>
+                  <li>{numberOfCommon} Common Items</li>
+                </ul>
+                <br />
+              </div>
+
               <hr />
+              <div id="price-para"className="largerText">
+                <p >£{price}, free shipping within UK and EU.</p>
+              </div>
+              <br />
               {Auth.isAuthenticated() && <Link to={{
                 pathname: '/basket',
                 state: this.state.premade

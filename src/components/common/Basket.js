@@ -23,8 +23,14 @@ class Basket extends React.Component {
     } else {
       this.setState({ basket: [...basket, newItem ]}, () => Cart.setContents(this.state.basket))
     }
-
   }
+
+  getTotal() {
+    return this.state.basket.reduce((sum, box) => {
+      return sum + box.price
+    }, 0)
+  }
+
   render() {
     console.log(this.state.newItem, 'this is price')
     console.log(this.state.basket, 'this.state.basket')
@@ -37,16 +43,18 @@ class Basket extends React.Component {
     return (
       <section id="boxes" className="section">
 
-        {this.state.basket.length === 0 && <h1 className="title is-1">Items in your basket </h1>}
+        <h1 className="title is-1"> Your Shopping Basket </h1>
+        <hr />
+        {this.state.basket.length === 0 && <h1 className="title is-1"> There are no items in your basket </h1>}
 
         <div className="basket">
           {this.state.basket.map((product, index) =>
-            <div className="basket" key={index}>
-              <Card {...product} />
+            <div id="basket-item" key={index}>
+              <Card {...product } />
             </div>
           )}
         </div>
-        <h4> Total cost: {} </h4>
+        <h4> Total cost: £{this.getTotal()} </h4>
         <Link to={'/premade'} className="button is-link is-outlined is-large">Continue Shopping</Link>
 
         <Link to={'/checkout'} className="button is-link is-outlined is-large">Check Out</Link>
