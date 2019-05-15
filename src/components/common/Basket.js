@@ -9,7 +9,7 @@ class Basket extends React.Component {
     super(props)
 
     this.state = {
-      newItem: this.props.state,
+      newItem: props.location.state,
       basket: []
     }
   }
@@ -26,7 +26,8 @@ class Basket extends React.Component {
   }
 
   render() {
-    console.log(this.state.basket.map(price => price.price ), 'this.state.basket')
+    console.log(this.state.newItem, 'this is price')
+    console.log(this.state.basket, 'this.state.basket')
     if(!this.state.basket){
       <h1 className="title is-1">Your basket is empty</h1>
       return null
@@ -36,7 +37,7 @@ class Basket extends React.Component {
     return (
       <section id="boxes" className="section">
 
-        {this.state.basket.length === 0 && <h1 className="title is-1">There are no items in your basket </h1>}
+        {this.state.basket.length === 0 && <h1 className="title is-1">Items in your basket </h1>}
 
         <div className="basket">
           {this.state.basket.map((product, index) =>
