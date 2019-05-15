@@ -32,12 +32,7 @@ class Index extends React.Component {
       .catch(err => console.error(err))
   }
 
-  saveDetails(){
-
-  }
-
   filterArray(){
-    console.log('i am running')
     const user = Auth.getPayload().sub
     console.log(user, 'this is the user')
     console.log(typeof this.state.mycrates)

@@ -20,15 +20,6 @@ const boxSchema = new mongoose.Schema({
     type: String,
     required: 'Add a description'
   },
-  numberOfLegendary: {
-    type: Number
-  },
-  numberOfRare: {
-    type: Number
-  },
-  numberOfCommon: {
-    type: Number
-  },
   createdBy: {
     type: mongoose.Schema.ObjectId,
     ref: 'User'
@@ -48,6 +39,31 @@ boxSchema.virtual('price')
       default: return 25
     }
   })
+boxSchema.virtual('numberOfLegendary')
+  .get(function() {
+    switch(this.contents.length) {
+      case 3: return 0
+      case 6: return 1
+      default: return 2
+    }
+  })
+boxSchema.virtual('numberOfRare')
+  .get(function() {
+    switch(this.contents.length) {
+      case 3: return 1
+      case 6: return 2
+      default: return 3
+    }
+  })
+boxSchema.virtual('numberOfCommon')
+  .get(function() {
+    switch(this.contents.length) {
+      case 3: return 2
+      case 6: return 3
+      default: return 4
+    }
+  })
+
 
 boxSchema.pre('save', function productToBox(next){
 

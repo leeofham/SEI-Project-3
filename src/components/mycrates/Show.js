@@ -45,7 +45,7 @@ class Show extends React.Component {
 
   render() {
     if(!this.state.box) return null
-    const { image, name, description } = this.state.box
+    const { image, name, description} = this.state.box
     const { price } = this.state
     console.log(this.state)
 
@@ -69,7 +69,10 @@ class Show extends React.Component {
               <p className="largerText">{description}</p>
               <hr />
               <p>£{price}</p>
-              {Auth.isAuthenticated() && <Link to="/basket" className="buttonNew">Add to your basket</Link>}
+              {Auth.isAuthenticated() && <Link to={{
+                pathname: '/basket',
+                state: this.state.box
+              }} className="buttonNew">Add to your basket</Link>}
               {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
             </div>
           </div>

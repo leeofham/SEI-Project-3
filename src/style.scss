@@ -72,9 +72,18 @@ hr{
     flex-wrap: wrap;
     flex-direction: column;
 
+    .card-header{
+      border: none;
+      box-shadow: 0px;
+    }
+
   .image img {
     border-radius: 8px;
   }
+}
+
+.hidden{
+  
 }
 
 #boxes {
