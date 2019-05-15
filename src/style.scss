@@ -71,9 +71,18 @@ hr{
     flex-wrap: wrap;
     flex-direction: column;
 
+    .card-header{
+      border: none;
+      box-shadow: 0px;
+    }
+
   .image img {
     border-radius: 8px;
   }
+}
+
+.hidden{
+
 }
 
 #boxes {
@@ -165,7 +174,7 @@ body {
   margin: 0 auto;
 }
 
-.input, .textarea {
+#form-profile {
   max-width: 50%;
   display: flex;
   justify-content: center;

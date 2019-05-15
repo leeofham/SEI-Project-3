@@ -1,4 +1,4 @@
-class Basket {
+class Cart {
 
   static getContents() {
     return JSON.parse(localStorage.getItem('basket')) || []
@@ -10,4 +10,4 @@ class Basket {
 
 }
 
-export default Basket
+export default Cart
