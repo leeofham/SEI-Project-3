@@ -6,6 +6,7 @@ div.hero.is-fullheight-with-navbar.hero-body,div{
   margin: 0, auto;
 }
 
+
 .hero {
   height: 100vh;
   background: #86B3D1;
@@ -31,11 +32,9 @@ h1 {
   button {
     font-family: 'Bangers', cursive;
     font-size: 25px;
-    color: #eb8019
+    color: #eb8019;
   }
 }
-
-
 
 html {
   height: 100vh;
@@ -146,7 +145,7 @@ h2 {
 .largerText {
   font-size: 25px;
   background-color: #558ABB;
-  box-shadow: 20px 15px 6px rgba(0,0,0,.5);
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.5);
   padding: 5px;
   color: white;
 }
@@ -173,4 +172,16 @@ body {
 
 .carousel.carousel-slider {
   margin: 0 auto;
+}
+
+.input, .textarea {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+
 }

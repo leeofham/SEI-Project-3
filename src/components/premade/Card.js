@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ image, category, total, numberOfLegendary, numberOfRare, numberOfCommon }) => {
+const Card = ({ image, category, total, numberOfLegendary, numberOfRare, numberOfCommon, price }) => {
   return (
     <div className="card">
       <div className="card-header">
@@ -21,6 +21,7 @@ const Card = ({ image, category, total, numberOfLegendary, numberOfRare, numberO
             <li>{numberOfRare} Rare items,</li>
             <li>{numberOfCommon} Common Items</li>
           </ul>
+          <p> Item price: £{price} </p>
         </div>
       </div>
     </div>
