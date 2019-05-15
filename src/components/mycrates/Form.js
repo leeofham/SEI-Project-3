@@ -45,7 +45,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
             value={data.category || ''}
           />
         </div>
-        {errors.image && <div className="help is-danger">{errors.image}</div>}
+        {errors.category && <div className="help is-danger">{errors.category}</div>}
       </div>
       <div className="field">
         <label className="label">Description</label>
@@ -58,7 +58,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
             value={data.description || ''}
           />
         </div>
-        {errors.image && <div className="help is-danger">{errors.image}</div>}
+        {errors.description && <div className="help is-danger">{errors.description}</div>}
       </div>
 
       <button className="buttonNew">Submit</button>

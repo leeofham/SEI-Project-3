@@ -20,6 +20,7 @@ class New extends React.Component {
 
   handleChange(e) {
     const data = { ...this.state.data, [e.target.name]: e.target.value }
+    
     this.setState({ data })
   }
 
@@ -31,7 +32,10 @@ class New extends React.Component {
       headers: { 'Authorization': `Bearer ${token}` }
     })
       .then(() => this.props.history.push('/mycrates'))
+      .catch(() => this.setState({ error: 'Invalid credentials' }))
   }
+
+
 
   render() {
     return (
