@@ -82,7 +82,7 @@ hr{
 }
 
 .hidden{
-  
+
 }
 
 #boxes {
@@ -134,20 +134,24 @@ h2 {
 }
 
 .buttonNew {
+  text-align: center;
+  display: block;
   font-family: 'Bangers', cursive;
   font-size: 25px;
   color: #eb8019;
   padding: 10px;
   border-radius: 4px;
   background-color: white;
+  margin: 30px auto;
+  width: 400px;
  }
 
 .largerText {
-  font-size: 25px;
-  background-color: #558ABB;
-  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  background-color: white;
   padding: 5px;
-  color: white;
+  color: black;
+  border: 2px solid black;
 }
 
 body {
@@ -174,7 +178,7 @@ body {
   margin: 0 auto;
 }
 
-.input, .textarea {
+#form-profile {
   max-width: 50%;
   display: flex;
   justify-content: center;
@@ -184,4 +188,10 @@ body {
   margin-right: 25%;
   width: 50%;
 
+}
+
+#price-para{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }

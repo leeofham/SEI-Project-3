@@ -41,8 +41,8 @@ class Basket extends React.Component {
 
         <div className="basket">
           {this.state.basket.map((product, index) =>
-            <div className="basket" key={index}>
-              <Card {...product} />
+            <div id="basket-item" key={index}>
+              <Card {...product } />
             </div>
           )}
         </div>

@@ -89,25 +89,25 @@ class Index extends React.Component {
 
           <h2 className="titleh2 is-fullwidth-desktop">Manage your account</h2>
 
-          <form onSubmit={this.handleSubmit}>
+          <form id='form-profile' onSubmit={this.handleSubmit}>
             <div className="field">
               <label className="label">Username</label>
               <div className="control">
-                <input className='input' name="username" placeholder="e.g. John" value={this.state.data.username} onChange={this.handleChange}></input>
+                <input id='form-profile'className='input' name="username" placeholder="e.g. John" value={this.state.data.username} onChange={this.handleChange}></input>
               </div>
             </div>
 
             <div className="field">
               <label className="label">First Name</label>
               <div className="control">
-                <input className='input' name="firstName" placeholder="e.g. Mr Smith" value={this.state.data.firstName} onChange={this.handleChange}></input>
+                <input id='form-profile'className='input' name="firstName" placeholder="e.g. Mr Smith" value={this.state.data.firstName} onChange={this.handleChange}></input>
               </div>
             </div>
 
             <div className="field">
               <label className="label">Last Name</label>
               <div className="control">
-                <input className='input' name="lastName" placeholder="e.g. Mr Smith" value={this.state.data.lastName} onChange={this.handleChange}></input>
+                <input id='form-profile'className='input' name="lastName" placeholder="e.g. Mr Smith" value={this.state.data.lastName} onChange={this.handleChange}></input>
               </div>
             </div>
 
@@ -121,12 +121,12 @@ class Index extends React.Component {
             <div className="field">
               <label className="label">Email</label>
               <div className="control">
-                <input className='input' name ="email" placeholder="1 Nerd Road" value={this.state.data.email} onChange={this.handleChange}></input>
+                <input id='form-profile' className='input' name ="email" placeholder="1 Nerd Road" value={this.state.data.email} onChange={this.handleChange}></input>
               </div>
             </div>
 
 
-            <button className="button" onClick={this.changeDetails}>Save your details!</button>
+            <button className="buttonNew" onClick={this.changeDetails}>Save your details!</button>
 
 
           </form>
