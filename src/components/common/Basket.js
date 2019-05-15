@@ -39,7 +39,7 @@ class Basket extends React.Component {
     return (
       <section id="boxes" className="section">
 
-        {this.state.basket} <h1 className="title is-1">Items in your basket </h1>
+        {this.state.basket.length === 0 && <h1 className="title is-1">Items in your basket </h1>}
 
         <div>
           {this.state.basket.map((product, index) =>
