@@ -26,7 +26,7 @@ class Basket extends React.Component {
   }
 
   render() {
-    console.log(this.props.data, 'this is data')
+    console.log(this.state.newItem, 'this is price')
     console.log(this.state.basket, 'this.state.basket')
     if(!this.state.basket){
       <h1 className="title is-1">Your basket is empty</h1>
