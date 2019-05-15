@@ -84,6 +84,21 @@ hr{
   }
 }
 
+label.label{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+.checkoutTitle{
+  margin-bottom: 40px;
+}
+
+.checkoutCard{
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+
 .card {
     border: solid black 4px;
     display: flex;
