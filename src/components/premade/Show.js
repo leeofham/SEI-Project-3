@@ -36,6 +36,7 @@ class Show extends React.Component {
     if(!this.state.premade) return null
     const { image, category, description } = this.state.premade
     const { price } = this.state
+    console.log(this.state.premade)
 
     return (
       <section className="section">
