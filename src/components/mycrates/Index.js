@@ -5,6 +5,7 @@ import Auth from '../../lib/Auth'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import Promise from 'bluebird'
+import Hero from '../common/Hero'
 
 import Card from './Card'
 // const user = Auth.getPayload().sub
@@ -59,12 +60,9 @@ class Index extends React.Component {
 
     return (
       <section className="section index">
+        <Hero />
 
-
-        <h2 className="titleh2 is-fullwidth-desktop">Your personally curated crates</h2>
         <div className="container">
-
-          <p>  When you make the crate of your dreams you will see them all here! </p>
 
           <Carousel
             showThumbs={false}
@@ -85,7 +83,7 @@ class Index extends React.Component {
             )}
           </Carousel>
 
-          <Link to="/mycrates/new" className="buttonNew">Make another crate!</Link>
+          <Link to="/mycrates/new" className="buttonNew">Make a crate!</Link>
 
           <h2 className="titleh2 is-fullwidth-desktop">Manage your account</h2>
 
