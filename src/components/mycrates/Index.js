@@ -32,10 +32,6 @@ class Index extends React.Component {
       .catch(err => console.error(err))
   }
 
-  saveDetails(){
-
-  }
-
   filterArray(){
     return this.state.mycrates.filter(mycrate => mycrate.createdBy === Auth.getPayload().sub)
   }
