@@ -40,7 +40,7 @@ class New extends React.Component {
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-half-desktop is-two-thirds-tablet">
-              <Form
+              <Form id="formNew"
                 handleChange={this.handleChange}
                 handleSubmit={this.handleSubmit}
                 data={this.state.data}
