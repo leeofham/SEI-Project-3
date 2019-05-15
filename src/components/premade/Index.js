@@ -38,7 +38,7 @@ class Index extends React.Component {
             autoPlay={true}
             interval={2000}
             stopOnHover={true}
-            width={400}
+            width={'400px'}
           >
             {this.state.premade.map(premade =>
               <div id="carousel" key={premade._id}>
