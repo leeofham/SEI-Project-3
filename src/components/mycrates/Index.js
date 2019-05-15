@@ -61,7 +61,7 @@ class Index extends React.Component {
             autoPlay={true}
             interval={2000}
             stopOnHover={true}
-            width={400}
+            width={'400px'}
           >
             {this.filterArray().map(mycrate =>
               <div id="carousel" key={mycrate._id}>
