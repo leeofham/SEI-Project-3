@@ -128,7 +128,7 @@ class Index extends React.Component {
             <div className="field">
               <label className="label">Address</label>
               <div className="control">
-                <input className='input' name="Address" placeholder="1 Nerd Road" value={this.state.data.address} onChange={this.handleChange}></input>
+                <input className='input' name="address" placeholder="1 Nerd Road" value={this.state.data.address} onChange={this.handleChange}></input>
               </div>
             </div>
 
