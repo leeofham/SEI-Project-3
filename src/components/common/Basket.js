@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../mycrates/Card'
+import Cart from '../../lib/Cart'
 
 class Basket extends React.Component {
 
@@ -15,14 +16,11 @@ class Basket extends React.Component {
 
   componentDidMount() {
     const { newItem } = this.state
-    let basket = []
-    if( JSON.parse(localStorage.getItem('Basket'))) {
-      basket = JSON.parse(localStorage.getItem('Basket'))
-    }
+    const basket = Cart.getContents()
     if(!newItem){
       this.setState({ basket: [...basket] })
     } else {
-      this.setState({ basket: [...basket, newItem ]}, () => localStorage.setItem('Basket', JSON.stringify(this.state.basket)))
+      this.setState({ basket: [...basket, newItem ]}, () => Cart.setContents(this.state.basket))
     }
 
   }

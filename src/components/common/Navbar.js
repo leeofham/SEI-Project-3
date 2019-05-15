@@ -14,6 +14,7 @@ class Navbar extends React.Component {
   }
 
   logout() {
+    localStorage.removeItem('basket')
     Auth.removeToken()
     this.props.history.push('/')
   }
@@ -26,6 +27,7 @@ class Navbar extends React.Component {
     if(prevProps.location.pathname !== this.props.location.pathname) {
       this.setState({ active: false })
     }
+
   }
 
   render() {
