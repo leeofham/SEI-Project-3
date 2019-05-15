@@ -13,7 +13,7 @@ const Card = ({ name, image, category, total, numberOfLegendary, numberOfRare, n
         <div className="content">
           <p>This box contains {total} items:</p>
           <ul><li>{numberOfLegendary} Legendary Items,</li>
-            <li>{numberOfRare} Rare items,</li>
+            <li>{numberOfRare} Rare items</li>
             <li>{numberOfCommon} Common Items</li>
           </ul>
         </div>

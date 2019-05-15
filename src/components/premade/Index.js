@@ -6,6 +6,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
 import Card from './Card'
+import CardCarousel from './CardCarousel'
+
 
 class Index extends React.Component {
 
@@ -43,12 +45,24 @@ class Index extends React.Component {
             {this.state.premade.map(premade =>
               <div id="carousel" key={premade._id}>
                 <Link to={`/premade/${premade._id}`}>
-                  <Card {...premade} />
+                  <CardCarousel {...premade} />
                 </Link>
               </div>
             )}
           </Carousel>
-
+          <br/>
+          <div className="columns is-multiline">
+            {this.state.premade.map(premade =>
+              <div key={premade.id} className='column is-4-desktop is-6-tablet'>
+                <Link to={{
+                  pathname: `/marsrover/${premade.id}`,
+                  state: premade
+                }}>
+                  <Card {...premade}/>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </section>
     )

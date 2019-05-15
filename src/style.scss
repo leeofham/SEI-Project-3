@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url(https://fonts.googleapis.com/css?family=Bangers);
 $background: #86B3D1;
 
@@ -63,6 +63,27 @@ hr{
   background-blend-mode: 'darken'
 }
 
+.card .carousel {
+    border: solid black 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    .card-header-title{
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+
+  .image img {
+    border-radius: 8px;
+  }
+}
+
 .card {
     border: solid black 4px;
     display: flex;
@@ -70,10 +91,13 @@ hr{
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    color: black;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
 
-    .card-header{
-      border: none;
-      box-shadow: 0px;
+    .card-header-title{
+      color: black;
+      font-family: 'Roboto', sans-serif;
     }
 
   .image img {

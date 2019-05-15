@@ -1,14 +1,19 @@
 import React from 'react'
 
 const Card = ({ image, category, total, numberOfLegendary, numberOfRare, numberOfCommon, price }) => {
+  const backgroundStyle = {
+    background: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) ), url(${image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundBlendMode: 'darken'
+  }
 
   return (
-    <div className="card">
-      <h3 className="subtitle">Premade {category} Box</h3>
-      <figure className="image">
-        <img src={image} alt="star-wars logo" />
-      </figure>
-      <div className="card-content">
+    <div className="card carousel" style={backgroundStyle}>
+      <div className="card-header carousel">
+        <h3 className="card-header-title carousel">Premade {category} Box</h3>
+      </div>
+      <div className="card-content carousel">
         <div className="content">
           <p>This box contains {total} items:</p>
           <ul><li>{numberOfLegendary} Legendary Items,</li>
