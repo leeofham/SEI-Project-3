@@ -4,12 +4,12 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
-        <label className="label">Name</label>
+        <label className="label">Name your dream crate</label>
         <div className="control">
           <input
             className="input"
             name="name"
-            placeholder="eg: Nerdy box!"
+            placeholder="eg: Limited edition Lord of The Rings!"
             onChange={handleChange}
             value={data.name || ''}
           />
@@ -17,7 +17,7 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         {errors.name && <div className="help is-danger">{errors.name}</div>}
       </div>
       <div className="field">
-        <label className="label">Size</label>
+        <label className="label">Size of box</label>
         <div className="control">
           <div className="select is-fullwidth">
             <select
@@ -35,12 +35,12 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         {errors.total && <div className="help is-danger">{errors.total}</div>}
       </div>
       <div className="field">
-        <label className="label">Genre and Category</label>
+        <label className="label">Genre or Category</label>
         <div className="control">
           <input
             className="input"
             name="category"
-            placeholder="eg: Star Wars Film"
+            placeholder="eg: Lord of The Ring"
             onChange={handleChange}
             value={data.category || ''}
           />
@@ -51,9 +51,9 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
         <label className="label">Description</label>
         <div className="control">
           <input
-            className="input"
+            className="textarea"
             name="description"
-            placeholder="This is my Star Wars box"
+            placeholder="This is my Lord of The Rings box containing limited edition Lord of The Rings merch!"
             onChange={handleChange}
             value={data.description || ''}
           />

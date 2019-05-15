@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = ({ image, category, total }) => {
   return (
-    <div className="card is-shady">
+    <div className="card">
       <div className="card-header">
         <h3 className="card-header-title">Premade {category} Box</h3>
       </div>

@@ -47,19 +47,20 @@ const Home = () => {
               </Link>}
             </div>
           </div>
+
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
-              <h2> Step Two: Choose a box  </h2>
+              <h2> Step Two, choose a box:  </h2>
               <Link to={'/premade'} className="button is-link is-outlined is-large">
-                <h3> Choose a premade  </h3>
+                <h3> Premade </h3>
               </Link>
 
               <Link to={'/mycrates/new'} className="button is-link is-outlined is-large">
                 <h3> Make your own </h3>
               </Link>
             </div>
-
           </div>
+
           <div className="column is-one-third-desktop is-half-tablet">
             <div className="column-style">
               <h2> Step Three: </h2>

@@ -36,8 +36,9 @@ class Index extends React.Component {
             showArrows={true}
             infiniteLoop={true}
             autoPlay={true}
-            interval={3000}
+            interval={2000}
             stopOnHover={true}
+            width={400}
           >
             {this.state.premade.map(premade =>
               <div id="carousel" key={premade._id}>

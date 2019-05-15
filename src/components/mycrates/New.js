@@ -36,6 +36,7 @@ class New extends React.Component {
   render() {
     return (
       <section className="section">
+        <h1>Design your dream crate here</h1>
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-half-desktop is-two-thirds-tablet">
