@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const User = require('./models/User')
-const Product = require('./models/product')
+const Product = require('./models/Product')
 const Box = require('./models/box')
 const { dbUri } = require('./config/environments')
 
