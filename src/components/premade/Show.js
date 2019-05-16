@@ -27,19 +27,21 @@ class Show extends React.Component {
     const { image, brandName, description, numberOfLegendary, numberOfCommon, numberOfRare, total, price } = this.state.premade
 
     return (
+
+
       <section className="section">
         <div className="container">
-          <h2 className="titleh2 is-fullwidth-desktop">{brandName} Premade Box</h2>
-          <hr />
+          <h2 className="titleh2 is-fullwidth-desktop" id="showtitle">{brandName} Premade Box</h2>
+          <div className="columns is-multiline" id="show-columns">
 
-          <div className="columns is-multiline">
-            <div className="column is-half-desktop is-full-tablet">
+
+            <div className="column is-half-desktop is-full-tablet" id="image-show">
               <figure className="image is-square">
                 <img src={image} alt={name} />
               </figure>
             </div>
 
-            <div className="column is-half-desktop is-full-tablet">
+            <div className="column is-half-desktop is-full-tablet" id="text-show">
               <div className="largerText">
                 <p>{description} </p>
                 <br/>
@@ -50,18 +52,17 @@ class Show extends React.Component {
                 </ul>
                 <br />
               </div>
-
-              <hr />
-              <div id="price-para"className="largerText">
-                <p >£{price}, free shipping within UK and EU.</p>
-              </div>
-              <br />
-              {Auth.isAuthenticated() && <Link to={{
-                pathname: '/basket',
-                state: this.state.premade
-              }} className="buttonNew">Add to your basket</Link>}
-              {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
             </div>
+            <hr />
+          </div>
+          <div id="price-para"className="">
+            <p >£{price}, free shipping within UK and EU.</p>
+            <hr />
+            {Auth.isAuthenticated() && <Link to={{
+              pathname: '/basket',
+              state: this.state.premade
+            }} className="buttonNew">Add to your basket</Link>}
+            {!Auth.isAuthenticated() && <Link to="/login" className="buttonNew">Login</Link>}
           </div>
         </div>
       </section>

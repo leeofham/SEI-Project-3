@@ -182,11 +182,32 @@ h2 {
  }
 
 .largerText {
-  font-size: 25px;
+  font-size: 15px;
   background-color: #558ABB;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  padding: 15px;
   color: white;
+  height: 100%;
+}
+
+#show-columns {
+  position: relative;
+  justify-content: center;
+}
+
+
+
+
+#image-show {
+  padding: 0px;
+  height: 400px;
+  width: 400px;
+}
+
+#text-show {
+  padding: 0px;
+  height: 400px;
+  width: 400px;
 }
 
 body {
@@ -210,6 +231,15 @@ body {
   letter-spacing: 4px;
   text-shadow: 5px 4px #346da3;
   color: white;
+}
+
+#showtitle {
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  letter-spacing: 4px;
+  text-shadow: 5px 4px #346da3;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .label {
@@ -246,4 +276,9 @@ body {
 
 .htitle1 {
   padding-bottom: 20px;
+}
+
+#price-para {
+  text-align: center;
+  padding: 20px;
 }
