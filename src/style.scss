@@ -179,6 +179,8 @@ h2 {
   padding: 10px;
   border-radius: 4px;
   background-color: white;
+  margin: 30px;
+  cursor: pointer;
  }
 
 .largerText {
@@ -253,14 +255,13 @@ body {
 }
 
 #form-profile {
-  max-width: 50%;
   display: flex;
   justify-content: center;
   text-align: center;
   display: inline-block;
-  margin-left: 25%;
-  margin-right: 25%;
-  width: 50%;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
 }
 
 .section {
@@ -268,7 +269,7 @@ body {
 }
 
 .hero1 {
-  background-color: black;
+  background: url('/images/texture.jpg');
   color: white;
   margin-bottom: 35px;
 

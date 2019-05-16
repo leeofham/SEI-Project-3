@@ -8,7 +8,6 @@ import Promise from 'bluebird'
 import Hero from '../common/Hero'
 
 import Card from './Card'
-// const user = Auth.getPayload().sub
 
 class Index extends React.Component {
   constructor() {
@@ -98,7 +97,7 @@ class Index extends React.Component {
             <div className="field">
               <label className="label">First Name</label>
               <div className="control">
-                <input id='form-profile'className='input' name="firstName" placeholder="e.g. Mr Smith" value={this.state.data.firstName} onChange={this.handleChange}></input>
+                <input id='form-profile' className='input' name="firstName" placeholder="e.g. Mr Smith" value={this.state.data.firstName} onChange={this.handleChange}></input>
               </div>
             </div>
 
@@ -112,14 +111,14 @@ class Index extends React.Component {
             <div className="field">
               <label className="label">Address</label>
               <div className="control">
-                <input className='input' name="address" placeholder="1 Nerd Road" value={this.state.data.address} onChange={this.handleChange}></input>
+                <input id='form-profile' className='input' name="address" placeholder="1 Nerd Road" value={this.state.data.address} onChange={this.handleChange}></input>
               </div>
             </div>
 
             <div className="field">
               <label className="label">Email</label>
               <div className="control">
-                <input id='form-profile' className='input' name ="email" placeholder="1 Nerd Road" value={this.state.data.email} onChange={this.handleChange}></input>
+                <input id='form-profile' className='input' name ="email" placeholder="nerd@nerd.com" value={this.state.data.email} onChange={this.handleChange}></input>
               </div>
             </div>
 
@@ -138,12 +137,3 @@ class Index extends React.Component {
 }
 
 export default Index
-// <h3 className="title is-full-width-desktop">If you have not made a crate</h3>
-
-// {this.state.mycrates.map(mycrate =>
-//   <div id="carousel" key={mycrate._id}>
-//     <Link to={`/mycrates/${mycrate._id}`}>
-//       <Card {...mycrate} />
-//     </Link>
-//   </div>
-// )}
