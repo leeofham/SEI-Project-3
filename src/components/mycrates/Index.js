@@ -85,7 +85,7 @@ class Index extends React.Component {
 
           <Link to="/mycrates/new" className="buttonNew">Make a crate!</Link>
 
-          <h2 className="titleh2 is-fullwidth-desktop">Manage your account</h2>
+          <h2 className="titleh2 manageh2 is-fullwidth-desktop">Manage your account</h2>
 
           <form id='form-profile' onSubmit={this.handleSubmit}>
             <div className="field">

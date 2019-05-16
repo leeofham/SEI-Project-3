@@ -84,6 +84,21 @@ hr{
   }
 }
 
+label.label{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+.checkoutTitle{
+  margin-bottom: 40px;
+}
+
+.checkoutCard{
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+
 .card {
     border: solid black 4px;
     display: flex;
@@ -186,6 +201,7 @@ body {
   letter-spacing: 4px;
   text-shadow: 5px 4px #346da3;
   color: black;
+  padding: 20px;
 }
 
 .titleh3 {
@@ -226,4 +242,8 @@ body {
   color: white;
   margin-bottom: 35px;
 
+}
+
+.htitle1 {
+  padding-bottom: 20px;
 }
