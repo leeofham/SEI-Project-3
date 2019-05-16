@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const User = require('./models/User')
 const Product = require('./models/Product')
-const Box = require('./models/box')
+const Box = require('./models/Box')
 const { dbUri } = require('./config/environments')
 
 mongoose.connect(dbUri, (err, db) => {
