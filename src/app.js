@@ -22,7 +22,7 @@ import MyCratesNew from './components/mycrates/New'
 import MyCratesEdit from './components/mycrates/Edit'
 import MyCratesShow from './components/mycrates/Show'
 
-import BoxesOrdered from './components/common/OrderedBox'
+import BoxesOrdered from './components/common/orderedBox'
 // import CheckoutForm from './components/common/CheckoutForm'
 import Checkout from './components/common/Checkout'
 import Basket from './components/common/Basket'
