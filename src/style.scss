@@ -118,6 +118,10 @@ label.label{
   .image img {
     border-radius: 8px;
   }
+
+  p {
+    text-align: center;
+  }
 }
 
 .hidden{
@@ -283,4 +287,10 @@ body {
   text-align: center;
   padding: 20px;
   font-size: 30px;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding: 25px;
 }
