@@ -55,7 +55,7 @@ class Index extends React.Component {
             {this.state.premade.map(premade =>
               <div key={premade.id} className='column is-4-desktop is-6-tablet'>
                 <Link to={{
-                  pathname: `/marsrover/${premade.id}`,
+                  pathname: `/premade/${premade.id}`,
                   state: premade
                 }}>
                   <Card {...premade}/>
