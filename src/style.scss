@@ -122,6 +122,10 @@ div.card.checkoutCard{
   .image img {
     border-radius: 8px;
   }
+
+  p {
+    text-align: center;
+  }
 }
 
 .hidden{
@@ -183,14 +187,37 @@ h2 {
   padding: 10px;
   border-radius: 4px;
   background-color: white;
+  margin: 30px;
+  cursor: pointer;
  }
 
 .largerText {
-  font-size: 25px;
+  font-size: 15px;
   background-color: #558ABB;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  padding: 15px;
   color: white;
+  height: 100%;
+}
+
+#show-columns {
+  position: relative;
+  justify-content: center;
+}
+
+
+
+
+#image-show {
+  padding: 0px;
+  height: 400px;
+  width: 400px;
+}
+
+#text-show {
+  padding: 0px;
+  height: 400px;
+  width: 400px;
 }
 
 body {
@@ -205,6 +232,7 @@ body {
   letter-spacing: 4px;
   text-shadow: 5px 4px #346da3;
   color: black;
+  padding: 20px;
 }
 
 .titleh3 {
@@ -213,6 +241,15 @@ body {
   letter-spacing: 4px;
   text-shadow: 5px 4px #346da3;
   color: white;
+}
+
+#showtitle {
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  letter-spacing: 4px;
+  text-shadow: 5px 4px #346da3;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .label {
@@ -226,14 +263,13 @@ body {
 }
 
 #form-profile {
-  max-width: 50%;
   display: flex;
   justify-content: center;
   text-align: center;
   display: inline-block;
-  margin-left: 25%;
-  margin-right: 25%;
-  width: 50%;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
 }
 
 .section {
@@ -241,8 +277,23 @@ body {
 }
 
 .hero1 {
-  background-color: black;
+  background: url('/images/texture.jpg');
   color: white;
   margin-bottom: 35px;
 
+}
+
+.htitle1 {
+  padding-bottom: 20px;
+}
+
+#price-para {
+  text-align: center;
+  padding: 20px;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding: 25px;
 }
