@@ -20,7 +20,7 @@ class New extends React.Component {
 
   handleChange(e) {
     const data = { ...this.state.data, [e.target.name]: e.target.value }
-    
+
     this.setState({ data })
   }
 
@@ -40,7 +40,7 @@ class New extends React.Component {
   render() {
     return (
       <section className="section">
-        <h1>Design your dream crate here</h1>
+        <h1 className="titleh2">Design your dream crate here</h1>
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-half-desktop is-two-thirds-tablet">
